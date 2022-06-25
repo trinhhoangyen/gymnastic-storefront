@@ -2,6 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
+@layer utilities {
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+@layer base {
+  h3 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  h2 {
+    /* font-style */
+    font-size: 40px;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 72px;
+    font-weight: 700;
+  }
+
+  p {
+    /* font-style */
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .b-vertical-line {
+    @apply border-solid;
+    @apply border-white;
+    @apply border-opacity-25;
+  }
+
+  @font-face {
+    font-family: 'SVN-Circular';
+    font-weight: 700;
+    src: url(../fonts/SVN-Circular/WOFF2/SVN-CircularBold.woff2) format('woff');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'SVN-Circular';
+    font-weight: 500;
+    src: url(../fonts/SVN-Circular/WOFF2/SVN-CircularMedium.woff2) format('woff');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'SVN-Circular';
+    font-weight: 400;
+    src: url(../fonts/SVN-Circular/WOFF2/SVN-CircularBook.woff2) format('woff');
+    font-display: swap;
+  }
 }
