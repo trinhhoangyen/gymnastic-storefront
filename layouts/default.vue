@@ -4,7 +4,7 @@
     <navigation-bar />
     <Nuxt />
     <!-- Footer - organism -->
-    <footer-page />
+    <footer />
   </div>
 </template>
 

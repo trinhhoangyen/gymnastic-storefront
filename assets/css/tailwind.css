@@ -2,58 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-
-    /* Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
-
-    .no-scrollbar {
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
-    }
-}
-
-@layer base {
-    h2 {
-        /* font-style */
-        font-size: 40px;
-        font-weight: 700;
-    }
-
-    p {
-        /* font-style */
-        font-size: 17px;
-        line-height: 24px;
-    }
-
-    .b-vertical-line {
-        @apply border-solid;
-        @apply border-white;
-        @apply border-opacity-25;
-    }
-
-    @font-face {
-        font-family: 'SVN-Circular';
-        font-weight: 700;
-        src: url(../fonts/SVN-Circular/WOFF2/SVN-CircularBold.woff2) format('woff');
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'SVN-Circular';
-        font-weight: 500;
-        src: url(../fonts/SVN-Circular/WOFF2/SVN-CircularMedium.woff2) format('woff');
-        font-display: swap;
-    }
-
-    @font-face {
-        font-family: 'SVN-Circular';
-        font-weight: 400;
-        src: url(../fonts/SVN-Circular/WOFF2/SVN-CircularBook.woff2) format('woff');
-        font-display: swap;
-    }
+body {
+  margin: 0;
 }

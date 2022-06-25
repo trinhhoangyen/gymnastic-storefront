@@ -1,5 +1,7 @@
 <template>
-  <div>{{item.name }}</div>
+  <nuxt-link class="nav-item" :to="item.path" :class="customClass">
+    <div>{{ item.name }}</div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -7,12 +9,22 @@ export default {
   props: {
     item: {
       type: Object,
-      default: {}
+      default: () => ({})
+    },
+    itemActive: {
+      type: String,
+      default: ""
     }
   },
   data() {
-    return {
-    }
+    return {};
+  },
+  computed: {
+    customClass() {
+      return this.$route.path === this.item.path ? "active" : "";
+    },
+  },
+  methods: {
   }
 };
 </script>

@@ -1,6 +1,14 @@
 <template>
   <div class="lg:flex lg:gap-x-5 navbar">
-    <navigation-item v-for="item in list" :key="item.key" :item="item" />
+    <div class="container">
+      <div class="nav-content">
+        <navigation-item
+          v-for="item in list"
+          :key="item.path"
+          :item="item"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -11,29 +19,46 @@ export default {
       list: [
         {
           name: "About Us",
-          key: "about",
-          path: ""
+          path: "/about"
         },
-        { name: "Schedule", key: "schedule", path: "" },
-        { name: "Contests", key: "contests", path: "" },
-        { name: "Partner", key: "about", path: "", path: "" },
-        { name: "Achievement", key: "achievement" }
+        { name: "Schedule", path: "/schedule" },
+        { name: "Contests", path: "/contests" },
+        { name: "Partner", path: "/", path: "/partner" },
+        { name: "Achievement", path: "/achievement" }
       ]
     };
+  },
+  methods: {
   }
 };
 </script>
 
 <style>
 .navbar {
-  color: #919191;
-  font: 16px/24px "Ubuntu", sans-serif;
-  -webkit-text-size-adjust: 100%;
-  box-sizing: inherit;
   background: #202020;
-  padding-bottom: 6px;
-  top: -20px;
+  top: 0;
   position: fixed;
   width: 100%;
+  font-size: 25px;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.nav-item {
+  color: #919191;
+  list-style: none;
+  float: left;
+  position: relative;
+  margin-right: 33px;
+  z-index: 150;
+  padding: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  border-top: 5px solid transparent;
+}
+.nav-item.active {
+  color: #f5d42d;
+  border-top-color: #f5d42d;
 }
 </style>
