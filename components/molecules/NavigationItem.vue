@@ -1,6 +1,6 @@
 <template>
   <nuxt-link class="nav-item" :to="item.path" :class="customClass">
-    <div>{{ item.name }}</div>
+    <div v-if="item.name">{{ item.name }}</div>
   </nuxt-link>
 </template>
 

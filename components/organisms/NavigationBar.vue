@@ -1,13 +1,11 @@
 <template>
   <div class="lg:flex lg:gap-x-5 navbar">
     <div class="container">
-      <div class="nav-content">
-        <navigation-item
-          v-for="item in list"
-          :key="item.path"
-          :item="item"
-        />
-      </div>
+      <account />
+      <nuxt-link to="/">
+        <img src="~/assets/logo/home.webp" alt="home" width="50px" />
+      </nuxt-link>
+      <navigation-item v-for="item in list" :key="item.path" :item="item" />
     </div>
   </div>
 </template>
@@ -28,8 +26,7 @@ export default {
       ]
     };
   },
-  methods: {
-  }
+  methods: {}
 };
 </script>
 
@@ -44,15 +41,18 @@ export default {
 .container {
   max-width: 1170px;
   margin: 0 auto;
+  height: 100px;
+  display: flex;
+  align-items: center;
 }
 .nav-item {
+  height: 100%;
   color: #919191;
   list-style: none;
   float: left;
   position: relative;
   margin-right: 33px;
   z-index: 150;
-  padding: 30px;
   cursor: pointer;
   text-decoration: none;
   border-top: 5px solid transparent;

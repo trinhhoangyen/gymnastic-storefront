@@ -21,7 +21,11 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: ["~/components/molecules/", "~/components/organisms/"],
+  components: [
+    "~/components/logos/",
+    "~/components/molecules/",
+    "~/components/organisms/",
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
