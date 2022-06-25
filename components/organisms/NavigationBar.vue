@@ -1,8 +1,7 @@
 <template>
   <div class="lg:flex lg:gap-x-5 navbar">
     <div class="container">
-      <account />
-      <nuxt-link to="/">
+      <nuxt-link class="homepage" to="/">
         <img src="~/assets/logo/home.webp" alt="home" width="50px" />
       </nuxt-link>
       <navigation-item v-for="item in list" :key="item.path" :item="item" />
@@ -39,19 +38,24 @@ export default {
   font-size: 25px;
 }
 .container {
+  display: flex;
   max-width: 1170px;
   margin: 0 auto;
   height: 100px;
-  display: flex;
-  align-items: center;
+}
+.homepage {
+  margin-right: 40px;
+  align-self: center;
 }
 .nav-item {
   height: 100%;
+  display: flex;
+  align-items: center;
   color: #919191;
   list-style: none;
   float: left;
   position: relative;
-  margin-right: 33px;
+  margin-right: 40px;
   z-index: 150;
   cursor: pointer;
   text-decoration: none;
