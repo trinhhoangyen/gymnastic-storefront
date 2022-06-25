@@ -4,7 +4,7 @@
     <navigation-bar />
     <Nuxt />
     <!-- Footer - organism -->
-    <footer />
+    <footer-page />
   </div>
 </template>
 
@@ -13,3 +13,10 @@ export default {
     
 };
 </script>
+
+<style>
+#app {
+  position: relative;
+  padding: 100px 0 686px;
+}
+</style>
