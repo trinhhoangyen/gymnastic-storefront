@@ -6,7 +6,7 @@
       class="relative z-10 min-w-xs"
       :class="customClass(item.type)"
     >
-      <img :src="item.image" :alt="item.title" class="w-full h-96" />
+      <img :src="item.image" :alt="item.title" class="w-full h-full" />
       <p class="absolute bottom-0 flex">{{ item.link }}</p>
     </div>
   </div>
@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     customClass(value: string) {
-      return value === "big" ? "w-2/3" : value === "medium" ? "w-1/3 pl-1" : "w-1/4";
+      return value === "big" ? "w-2/3 h-96" : value === "medium" ?  "w-1/3 pl-1 h-96" : "w-1/3 h-80";
     }
   }
 };
