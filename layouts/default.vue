@@ -2,7 +2,7 @@
   <div id="app">
     <!-- NavigationBar - organism -->
     <navigation-bar />
-    <Nuxt />
+    <Nuxt class="app" />
     <!-- Footer - organism -->
     <footer />
   </div>
@@ -13,3 +13,9 @@ export default {
     
 };
 </script>
+
+<style>
+#app {
+  padding-top: 100px;
+}
+</style>
