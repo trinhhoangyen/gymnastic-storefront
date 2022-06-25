@@ -17,6 +17,9 @@ module.exports = {
         "grey-5": "#252525",
         "yellow-1": "#f5d42d",
       },
+      minWidth: {
+        xs: "320px",
+      },
     },
   },
   variants: {
