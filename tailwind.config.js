@@ -3,8 +3,7 @@ module.exports = {
   theme: {
     borderRadius: {},
     fontFamily: {},
-    boxShadow: {
-    },
+    boxShadow: {},
     extend: {
       spacing: {
         25: "100px",
@@ -13,6 +12,7 @@ module.exports = {
       colors: {
         "grey-1": "#202020",
         "grey-2": "#919191",
+        "grey-3": "#333",
         "yellow-1": "#f5d42d",
       },
     },

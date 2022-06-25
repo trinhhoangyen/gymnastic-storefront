@@ -13,10 +13,3 @@ export default {
     
 };
 </script>
-
-<style>
-.main {
-  max-width: 1170px;
-  margin: 0 auto;
-}
-</style>
