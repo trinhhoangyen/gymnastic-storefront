@@ -7,7 +7,7 @@
       :class="customClass(item.type)"
     >
       <img :src="item.image" :alt="item.title" class="w-full h-full" />
-      <p class="absolute bottom-0 flex">{{ item.link }}</p>
+      <a class="absolute bottom-0 flex w-full p-5 text-white bg-black-50" target="_blank" :href="item.link">{{ item.title }}</a>
     </div>
   </div>
 </template>
@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     customClass(value: string) {
-      return value === "big" ? "w-2/3 h-96" : value === "medium" ?  "w-1/3 pl-1 h-96" : "w-1/3 h-80";
+      return value === "big" ? "w-2/3 h-96" : value === "medium" ?  "w-1/3 pl-1 h-96" : "w-1/4 h-72 pl-1";
     }
   }
 };

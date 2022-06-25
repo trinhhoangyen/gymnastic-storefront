@@ -16,9 +16,10 @@ module.exports = {
         "grey-4": "#1a1a1a",
         "grey-5": "#252525",
         "yellow-1": "#f5d42d",
+        "black-50": "rgba(0, 0, 0, 0.5)",
       },
       minWidth: {
-        xs: "320px",
+        xs: "280px",
       },
     },
   },
