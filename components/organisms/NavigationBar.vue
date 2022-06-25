@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-0 w-full text-base lg:flex lg:gap-x-5 bg-grey-1">
+  <div class="fixed top-0 z-50 w-full text-base lg:flex lg:gap-x-5 bg-grey-1">
     <div class="flex w-3/5 mx-auto h-25">
       <nuxt-link class="self-center mr-10" to="/">
         <img

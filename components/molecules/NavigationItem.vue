@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    class="z-50 flex items-center h-full mx-5 text-lg border-t-4 border-transparent cursor-pointer hover:text-white text-grey-2"
+    class="flex items-center h-full mx-5 text-lg border-t-4 border-transparent cursor-pointer hover:text-white text-grey-2"
     :to="item.path"
     :class="customClass"
   >
