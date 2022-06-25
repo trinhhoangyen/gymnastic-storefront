@@ -1,43 +1,30 @@
 <template>
-  <div class="footer">
-    <div class="footer-notes">
+  <div class="absolute bottom-0 w-full text-lg text-white bg-grey-1">
+    <div class="w-3/5 py-4 pt-10 mx-auto pb-14">
       <div class="col" style="float:left;width:60%;">
-        <div style="margin-bottom:20px;">
-          <h4>CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN DỊCH VỤ TNT</h4>
-          <br />
+        <h4 class="mb-5">CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN DỊCH VỤ TNT</h4>
+        <div class="flex mb-5">
+          <building-icon class="self-center w-6 h-6 mr-2" />Trụ sở chính: 52 Thành Thái, Phường 12, Quận 10, Thành Phố Hồ Chí Minh
         </div>
-        <div class="info-item" style="margin-bottom:20px;">
-          <BuildingIcon />Trụ sở chính: 52 Thành Thái, Phường 12, Quận 10, Thành Phố Hồ Chí Minh
-          <br />
+        <div class="flex mb-5">
+          <phone-icon class="self-center w-6 h-6 mr-2" />Hotline: 022222222222
         </div>
-        <div class="info-item" style="margin-bottom:20px;">
-          <PhoneIcon />Hotline: 022222222222
-          <br />
+        <div class="flex mb-5">
+          <email-icon class="self-center w-6 h-6 mr-2" />Email:
         </div>
-        <div class="info-item" style="margin-bottom:20px;">
-          <EmailIcon />Email:
-          <br />
-        </div>
-        <div class="info-item" style="margin-bottom:20px;">
-          <WorkIcon />Website:
-          <br />
+        <div class="flex mb-5">
+          <work-icon class="self-center w-6 h-6 mr-2" />Website:
         </div>
         <div>
-          <div style="margin-bottom:20px;">
-            <h4>DỊCH VỤ KHÁCH HÀNG</h4>
-            <br />
+          <h4 class="mb-5">DỊCH VỤ KHÁCH HÀNG</h4>
+          <div class="flex mb-5">
+            <post class="self-center w-6 h-6 mr-2" />Term of Use
           </div>
-          <div class="info-item" style="margin-bottom:20px;">
-            <Post />Term of Use
-            <br />
+          <div class="flex mb-5">
+            <messenger-icon class="self-center w-6 h-6 mr-2" />Contact Us
           </div>
-          <div class="info-item" style="margin-bottom:20px;">
-            <MessengerIcon />Contact Us
-            <br />
-          </div>
-          <div class="info-item" style="margin-bottom:20px;">
-            <Account />Privacy Policy
-            <br />
+          <div class="flex mb-5">
+            <account class="self-center w-6 h-6 mr-2" />Privacy Policy
           </div>
         </div>
       </div>
@@ -56,7 +43,9 @@
         </div>
       </div>
     </div>
-    <div class="main-footer">© 2022 Allrights reserved LIONS TNT</div>
+    <div
+      class="clear-both text-center bg-grey-4 py-7 border-t-1 border-t-grey-5"
+    >© 2022 Allrights reserved LIONS TNT</div>
   </div>
 </template>
 
@@ -69,27 +58,4 @@ export default {
 </script>
 
 <style>
-.footer {
-  background-color: #202020;
-  color: #fff;
-  font-size: 18px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.footer-notes {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 15px;
-  padding-bottom: 60px;
-  padding-top: 40px;
-}
-.main-footer {
-  background: #1a1a1a;
-  padding: 30px 0;
-  border-top: 1px solid #252525;
-  text-align: center;
-  clear: both;
-}
 </style>
