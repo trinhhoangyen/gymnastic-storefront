@@ -1,11 +1,14 @@
 <template>
-  <Tutorial/>
+  <div>abc</div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  name: 'IndexPage'
-})
+export default {
+};
 </script>
+
+<style>
+body {
+  margin: 0;
+}
+</style>
