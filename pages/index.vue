@@ -1,49 +1,6 @@
 <template>
-  <div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
-    <div>abc</div>
+  <div class="main">
+    <div class="mb-10 text-red-900">abc</div>
     <div>abc</div>
     <div>abc</div>
     <div>abc</div>
@@ -62,7 +19,4 @@ export default {};
 </script>
 
 <style>
-body {
-  margin: 0;
-}
 </style>

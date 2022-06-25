@@ -1,5 +1,9 @@
 <template>
-  <nuxt-link class="nav-item" :to="item.path" :class="customClass">
+  <nuxt-link
+    class="z-50 flex items-center h-full mx-5 border-t-4 border-transparent cursor-pointer text-grey-2"
+    :to="item.path"
+    :class="customClass"
+  >
     <div v-if="item.name">{{ item.name }}</div>
   </nuxt-link>
 </template>
@@ -21,10 +25,9 @@ export default {
   },
   computed: {
     customClass() {
-      return this.$route.path === this.item.path ? "active" : "";
-    },
+      return this.$route.path === this.item.path ? "text-yellow-1 border-yellow-1" : "";
+    }
   },
-  methods: {
-  }
+  methods: {}
 };
 </script>

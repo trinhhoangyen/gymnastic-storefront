@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="relative min-h-screen pt-25 pb-686/16">
     <!-- NavigationBar - organism -->
     <navigation-bar />
     <Nuxt />
@@ -15,8 +15,8 @@ export default {
 </script>
 
 <style>
-#app {
-  position: relative;
-  padding: 100px 0 686px;
+.main {
+  max-width: 1170px;
+  margin: 0 auto;
 }
 </style>
