@@ -34,6 +34,7 @@ module.exports = {
     display: ["responsive", "important"],
     fontWeight: ["hover"],
     cursor: ["hover"],
+    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
   },
   plugins: [require("@tailwindcss/line-clamp")],
 };
