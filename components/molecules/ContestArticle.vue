@@ -21,7 +21,7 @@
                     and the NPC News TV YouTube Channel. This is Nicole’s …</p>
             </div>
             <div class="flex">
-                <EyeIcon></EyeIcon>
+                <eye-icon></eye-icon>
               <a href="" class="text-gray-900 leading-none pl-2">READ MORE</a>
             </div>
         </div>
