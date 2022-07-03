@@ -1,10 +1,10 @@
 <template>
   <nuxt-link
-    class="flex items-center h-full mx-5 text-xl font-medium border-t-4 border-transparent cursor-pointer hover:text-white text-grey-2"
+    class="flex items-center h-full mx-5 text-l font-bold border-t-4 border-transparent cursor-pointer hover:text-red-bold text-grey-4"
     :to="item.path"
     :class="customClass"
   >
-    <div v-if="item.name">{{ item.name }}</div>
+    <div v-if="item.name">{{ item.name.toUpperCase() }}</div>
   </nuxt-link>
 </template>
 

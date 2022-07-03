@@ -1,7 +1,14 @@
 module.exports = {
   content: [],
   theme: {
-    borderRadius: {},
+    borderRadius: {
+      'none': '0',
+      'sm': '.125rem',
+      DEFAULT: '.25rem',
+      'lg': '.5rem',
+      '2xl': '1rem',
+      'full': '9999px',
+    },
     fontFamily: {},
     boxShadow: {},
     extend: {
@@ -19,6 +26,8 @@ module.exports = {
         "grey-7": "#dedede",
         "yellow-1": "#f5d42d",
         "black-50": "rgba(0, 0, 0, 0.5)",
+        "red-light": "#a50000",
+        "red-bold": "#720000"
       },
       minWidth: {
         xs: "280px",
