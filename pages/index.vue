@@ -1,5 +1,6 @@
 <template>
   <div class="w-full">
+    <banner-home />
     <div class="bg-grey-6">
       <div
         class="flex flex-wrap w-4/5 h-full pt-5 pb-20 mx-auto lg:w-3/5 gap-y-1 lg:pt-10 text-grey-2"
