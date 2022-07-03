@@ -1,6 +1,6 @@
 <template>
-  <div class="fixed top-0 z-50 w-full lg:flex lg:gap-x-5 bg-white">
-    <div class="flex justify-end w-3/5 mx-auto h-25">
+  <div class="fixed top-0 z-50 w-full bg-white lg:flex lg:gap-x-5">
+    <div class="flex w-3/5 mx-auto h-25">
       <nuxt-link class="self-center mr-10" to="/">
         <img
           :src="require('@/assets/logo/logo.png')"
