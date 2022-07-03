@@ -28,20 +28,8 @@
       <div class="social-network">
         <p class=""><b>SOCIAL NETWORK</b></p>
         <div class="flex mt-2">
-          <span>
-            <facebook-icon class="self-center w-6 h-6 mr-6" />
-          </span>
-          <span>
-            <messenger-icon class="self-center w-6 h-6 mr-6" />
-          </span>
-          <span>
-            <instagram-icon class="self-center w-6 h-6 mr-6" />
-          </span>
-          <span>
-            <vnpay-icon class="self-center w-6 h-6 mr-6" />
-          </span>
-          <span>
-            <momo-icon class="self-center w-6 h-6 mr-6" />
+          <span v-for="icon in iconList" :key="icon">
+            <component :is="icon" class="self-center w-6 h-6 mr-6" />
           </span>
         </div>
         <div class="col">
@@ -63,7 +51,15 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      iconList: [
+        "facebook-icon",
+        "messenger-icon",
+        "instagram-icon",
+        "vnpay-icon",
+        "momo-icon"
+      ]
+    };
   }
 };
 </script>
