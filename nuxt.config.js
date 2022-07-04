@@ -69,9 +69,17 @@ export default {
     ],
     parsePages: false,
     pages: {
+      "/index": {
+        en: "/en",
+        vn: "/",
+      },
       about: {
-        en: "/about",
-        vn: "/about",
+        en: "/about-us",
+        vn: "/ve-chung-toi",
+      },
+      product: {
+        en: "/product",
+        vn: "/danh-sach-san-pham",
       },
     },
   },
