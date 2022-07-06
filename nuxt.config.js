@@ -56,15 +56,17 @@ export default {
     langDir: "locales",
     locales: [
       {
-        code: "en",
-        iso: "en",
-        file: "./en",
-      },
-      {
         code: "vn",
         iso: "vn",
         file: "./vn",
+        name: "VN",
         isCatchallLocale: true,
+      },
+      {
+        code: "en",
+        iso: "en",
+        file: "./en",
+        name: "EN",
       },
     ],
     parsePages: false,
