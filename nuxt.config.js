@@ -37,46 +37,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/axios", "@nuxtjs/i18n"],
-
-  alias: {
-    i18n: resolve(__dirname, "./locales"),
-  },
-  i18n: {
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      onlyOnRoot: true,
-    },
-    defaultLocale: "vn",
-    vueI18n: {
-      fallbackLocale: "vn",
-    },
-    lazy: true,
-    langDir: "locales",
-    locales: [
-      {
-        code: "vn",
-        iso: "vn",
-        file: "./vn",
-        name: "VN",
-        isCatchallLocale: true,
-      },
-      {
-        code: "en",
-        iso: "en",
-        file: "./en",
-        name: "EN",
-      },
-    ],
-    parsePages: false,
-    pages: {
-      about: {
-        en: "/about",
-        vn: "/about",
-      },
-    },
-  },
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/axios"],
 
   axios: {
     baseURL: "https://gymnastic-dev.azurewebsites.net",

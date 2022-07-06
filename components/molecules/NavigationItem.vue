@@ -4,7 +4,7 @@
     :to="item.path"
     :class="customClass"
   >
-    <div v-if="item.name">{{ $t(item.name) }}</div>
+    <div v-if="item.name">{{ item.name }}</div>
   </nuxt-link>
 </template>
 

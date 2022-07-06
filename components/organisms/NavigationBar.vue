@@ -26,38 +26,25 @@ export default {
     return {
       list: [
         {
-          name: "global.navbar.about",
+          name: "Về chúng tôi",
           path: "/about"
         },
         {
-          name: "global.navbar.products",
+          name: "Sản phẩm",
           path: "/products"
         },
         {
-          name: "global.navbar.schedule",
-          path: "/schedule"
-        },
-        {
-          name: "global.navbar.contests",
-          path: "/contests"
-        },
-        {
-          name: "global.navbar.partner",
-          path: "/",
+          name: "Hội viên",
           path: "/partner"
         },
         {
-          name: "global.navbar.achievement",
+          name: "Thành tích",
           path: "/achievement"
         }
       ]
     };
   },
   computed: {
-    availableLocales() {
-      console.log(this.$i18n.locales.filter(i => i.code !== this.$i18n.locale));
-      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale);
-    }
   },
   methods: {}
 };
