@@ -2,15 +2,17 @@ module.exports = {
   content: [],
   theme: {
     borderRadius: {
-      'none': '0',
-      'sm': '.125rem',
-      DEFAULT: '.25rem',
-      'lg': '.5rem',
-      '2xl': '1rem',
-      'full': '9999px',
+      none: "0",
+      sm: ".125rem",
+      DEFAULT: ".25rem",
+      lg: ".5rem",
+      "2xl": "1rem",
+      full: "9999px",
     },
     fontFamily: {},
-    boxShadow: {},
+    boxShadow: {
+      "3xl": "0px 5px 10px rgba(204, 204, 204, 0.1)",
+    },
     extend: {
       spacing: {
         25: "100px",
@@ -27,7 +29,7 @@ module.exports = {
         "yellow-1": "#f5d42d",
         "black-50": "rgba(0, 0, 0, 0.5)",
         "red-light": "#a50000",
-        "red-bold": "#720000"
+        "red-bold": "#720000",
       },
       minWidth: {
         xs: "280px",
@@ -43,7 +45,7 @@ module.exports = {
     display: ["responsive", "important"],
     fontWeight: ["hover"],
     cursor: ["hover"],
-    textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+    textColor: ["responsive", "hover", "focus", "group-hover"],
   },
   plugins: [require("@tailwindcss/line-clamp")],
 };
