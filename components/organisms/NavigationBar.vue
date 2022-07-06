@@ -1,7 +1,7 @@
 <template>
-  <div class="fixed top-0 z-50 w-full bg-white lg:flex lg:gap-x-5">
-    <div class="flex self-center justify-between w-11/12 mx-auto xl:w-4/5 h-25">
-      <nuxt-link class="self-center mr-10" to="/">
+  <div class="fixed top-0 left-0 z-50 w-full bg-white h-25">
+    <div class="flex justify-between w-11/12 mx-auto xl:w-4/5">
+      <nuxt-link class="self-center" to="/">
         <img :src="require('@/assets/logo/logo.png')" alt="home" width="70px" />
       </nuxt-link>
       <div class="self-center lg:hidden">
@@ -9,7 +9,12 @@
       </div>
       <div class="hidden lg:flex">
         <navigation-item v-for="item in list" :key="item.path" :item="item" />
-        <div></div>
+        <nuxt-link
+          class="flex items-center h-full font-bold uppercase border-t-4 border-transparent cursor-pointer lg:ml-5 text-l hover:text-red-bold text-grey-4"
+          v-for="locale in availableLocales"
+          :key="locale.code"
+          :to="switchLocalePath(locale.code)"
+        >{{ locale.name }}</nuxt-link>
       </div>
     </div>
   </div>
@@ -21,18 +26,39 @@ export default {
     return {
       list: [
         {
-          name: "About Us",
+          name: "global.navbar.about",
           path: "/about"
         },
-        { name: "Products", path: "/products" },
-        { name: "Schedule", path: "/schedule" },
-        { name: "Contests", path: "/contests" },
-        { name: "Partner", path: "/", path: "/partner" },
-        { name: "Achievement", path: "/achievement" }
+        {
+          name: "global.navbar.products",
+          path: "/products"
+        },
+        {
+          name: "global.navbar.schedule",
+          path: "/schedule"
+        },
+        {
+          name: "global.navbar.contests",
+          path: "/contests"
+        },
+        {
+          name: "global.navbar.partner",
+          path: "/",
+          path: "/partner"
+        },
+        {
+          name: "global.navbar.achievement",
+          path: "/achievement"
+        }
       ]
     };
   },
-  computed: {},
+  computed: {
+    availableLocales() {
+      console.log(this.$i18n.locales.filter(i => i.code !== this.$i18n.locale));
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale);
+    }
+  },
   methods: {}
 };
 </script>
