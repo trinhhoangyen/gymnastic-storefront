@@ -144,6 +144,7 @@ export default {
       ]
     };
   },
+
   methods: {
     customClass(value: string) {
       return value === "big"
