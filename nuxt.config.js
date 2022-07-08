@@ -24,6 +24,7 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
+    "~/components/atoms/",
     "~/components/logos/",
     "~/components/molecules/",
     "~/components/organisms/",
@@ -39,21 +40,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/axios"],
 
-  axios: {
-    baseURL: "https://gymnastic-dev.azurewebsites.net",
-  },
-
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL,
-    },
-  },
-
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: process.env.BASE_URL,
-    },
-  },
+  axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
