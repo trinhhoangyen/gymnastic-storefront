@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-wrap w-4/5 py-10 mx-auto bg-white m-bg-dark gap-x-8">
+  <div class="flex flex-wrap w-4/5 gap-8 py-10 mx-auto bg-white m-bg-dark">
     <product-item
-      class="w-1/2 p-3 shadow-3xl"
+      class="w-2/5 p-3 shadow-3xl"
       v-for="(item, index) in products"
       :key="index"
       :data="item"
