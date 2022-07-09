@@ -1,6 +1,11 @@
 <template>
-  <div class="w-4/5 mx-auto">
-    <product-detail v-for="(item, index) in products" :key="index" :data="item" />
+  <div class="flex flex-wrap w-4/5 py-10 mx-auto bg-white gap-x-8">
+    <product-item
+      class="w-1/2 p-3 shadow-3xl"
+      v-for="(item, index) in products"
+      :key="index"
+      :data="item"
+    />
   </div>
 </template>
 
