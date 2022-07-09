@@ -19,7 +19,6 @@ export default {
   },
   async created() {
     const res = await services.getProducts();
-    console.log(res);
     this.products = res;
   }
 };
