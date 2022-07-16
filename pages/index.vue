@@ -1,25 +1,22 @@
 <template>
   <div class="w-full">
-    <!-- <banner-home /> -->
-    <div class="bg-grey-6">
-      <div
-        class="flex flex-wrap w-full h-full pt-5 pb-20 mx-auto sm:w-4/5 lg:w-3/5 gap-y-1 lg:pt-10 text-grey-2"
-      >
-        <div
-          v-for="item in list"
-          :key="item"
-          class="relative z-10 min-w-xs"
-          :class="customClass(item.type)"
-        >
-          <img :src="item.image" :alt="item.headline" class="object-cover w-full h-full" />
-          <a
-            class="absolute bottom-0 flex w-full p-5 text-white bg-black-50"
-            target="_blank"
-            :href="item.link"
-          >{{ item.headline }}</a>
-        </div>
-      </div>
-    </div>
+    <v-carousel
+      :continuous="true"
+      :cycle="true"
+      :show-arrows="false"
+      hide-delimiter-background
+      delimiter-icon="mdi-minus"
+    >
+      <v-carousel-item
+        v-for="(item,i) in items"
+        :key="i"
+        :src="item.src"
+        reverse-transition="fade-transition"
+        transition="fade-transition"
+      ></v-carousel-item>
+    </v-carousel>
+
+    <!-- list -->
     <div class="flex w-4/5 gap-4 py-10 mx-auto bg-white lg:w-3/5">
       <template v-for="item in list" class="w-1/3">
         <div v-if="item.showMore" :key="item">
@@ -59,6 +56,15 @@
 export default {
   data() {
     return {
+      items: [
+        {
+          src:
+            "https://citigym.com.vn/storage/uploads/1440x630-at-2x-100-1905x834.jpg"
+        },
+        {
+          src: "https://citigym.com.vn/storage/uploads/1440x630-1905x834.jpg"
+        }
+      ],
       list: [
         {
           type: "big",
