@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-10/12 py-20 mx-auto lg:w-8/12" v-if="product">
+  <div class="flex w-10/12 gap-3 py-20 mx-auto lg:gap-6 lg:w-8/12" v-if="product">
     <div class="sm:w-2/5">
       <carousel v-if="product.imageDetails" :list="product.imageDetails" />
     </div>
