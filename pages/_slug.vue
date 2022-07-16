@@ -1,6 +1,9 @@
 <template>
   <div>
+    <!-- ProductDetail.vue molecules -->
     <product-detail :product="product" />
+    <!-- ListSameProducts.vue molecules -->
+    <list-same-products :category-id="categoryId" />
   </div>
 </template>
 
@@ -19,9 +22,13 @@ export default {
     };
 
     return {
-      product,
-      error: res.status
+      product
     };
+  },
+  computed: {
+    categoryId() {
+      return this.product.productCategory.productCategoryId;
+    }
   }
 };
 </script>
