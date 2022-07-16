@@ -5,6 +5,13 @@ const getProducts = async () => {
   return res.data.result;
 };
 
+const getSameProducts = async (productCategoryId) => {
+  const res = await axios.get(
+    `/api/products?ProductCategoryId=${productCategoryId}`
+  );
+  return res.data.result;
+};
+
 const getProductDetail = async (slug) => {
   const res = await axios.get(`/api/products/${slug}`);
   return res;
@@ -12,5 +19,6 @@ const getProductDetail = async (slug) => {
 
 export default {
   getProducts,
-  getProductDetail
+  getSameProducts,
+  getProductDetail,
 };
