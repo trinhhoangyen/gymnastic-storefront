@@ -5,12 +5,12 @@ const getProducts = async () => {
   return res.data.result;
 };
 
-const getImage = async (filename) => {
-  const res = await axios.get("/api/storages/" + filename);
-  return res.config.baseURL + res.config.url;
+const getProductDetail = async (slug) => {
+  const res = await axios.get(`/api/products/${slug}`);
+  return res;
 };
 
 export default {
   getProducts,
-  getImage,
+  getProductDetail
 };
