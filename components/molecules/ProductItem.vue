@@ -1,16 +1,21 @@
 <template>
-  <div class="flex">
+  <div class="flex" @click="goToProductDetail">
     <div class="sm:w-2/5">
-      <img :src="image" alt="product-image" />
+      <img
+        v-if="data.image"
+        :src="`https://gymnastic-dev.azurewebsites.net/api/storages/${data.image}`"
+        alt="product-image"
+      />
     </div>
     <div class="py-2 pl-0 sm:w-3/5 lg:pl-4 sm:pl-2">
       <p v-if="data.name" class="font-bold text-grey-3">{{ data.name}}</p>
+      <p v-if="data.pricePreDiscount" class="mb-5">{{ data.pricePreDiscount | formatPriceVnd }}</p>
     </div>
   </div>
 </template>
 
 <script>
-import services from "~/services";
+import { formatPriceVnd } from "~/utils";
 export default {
   props: {
     data: {
@@ -18,14 +23,14 @@ export default {
       default: {}
     }
   },
-  data() {
-    return {
-      image: ""
-    };
+  filters: {
+    formatPriceVnd
   },
-  async created() {
-    const res = await services.getImage(this.data.image);
-    this.image = res;
+  methods: {
+    goToProductDetail() {
+      console.log("data.id: ", this.data.id);
+      this.$router.push(`/${this.data.id}`);
+    }
   }
 };
 </script>

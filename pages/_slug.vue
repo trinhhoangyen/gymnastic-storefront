@@ -17,10 +17,10 @@
 
       <div class="justify-between mb-5 lg:flex">
         <div v-if="productRange" class="lg:w-49/100">
-          <product-detail-line v-for="(item, key) in productRange" :key="key" :item="item" />
+          <product-detail-line v-for="(item, index) in productRange" :key="index" :item="item" />
         </div>
         <div v-if="productInfo" class="lg:w-49/100">
-          <product-detail-line v-for="(item, key) in productInfo" :key="key" :item="item" />
+          <product-detail-line v-for="(item, index) in productInfo" :key="index" :item="item" />
         </div>
       </div>
       <div>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="item" class="grid grid-cols-4 gap-2">
+  <div v-if="item" class="grid grid-cols-4 gap-1 mb-1">
     <p class="col-span-2 px-2 py-1 text-sm font-semibold border">{{ item.name }}</p>
     <div class="col-span-2 px-2 py-1 border">
       <p v-if="item.productDetailType === 'Information'" class="text-sm">{{ item.description }}</p>
