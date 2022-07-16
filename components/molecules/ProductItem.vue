@@ -23,7 +23,7 @@
         </p>
         <p
           v-if="data.price"
-          class="mb-5 text-base font-bold text-red-600"
+          class="text-base font-bold text-red-600"
         >{{ data.price | formatPriceVnd }}</p>
       </div>
     </div>
