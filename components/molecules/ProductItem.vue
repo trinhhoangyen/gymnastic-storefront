@@ -28,7 +28,6 @@ export default {
   },
   methods: {
     goToProductDetail() {
-      console.log("data.id: ", this.data.id);
       this.$router.push(`/${this.data.id}`);
     }
   }

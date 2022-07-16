@@ -1,11 +1,7 @@
 <template>
   <div class="flex w-10/12 py-20 mx-auto lg:w-8/12" v-if="product">
     <div class="sm:w-2/5">
-      <img
-        v-if="product.image"
-        :src="`https://gymnastic-dev.azurewebsites.net/api/storages/${product.image}`"
-        alt="product-image"
-      />
+      <carousel v-if="product.imageDetails" :list="product.imageDetails" />
     </div>
     <div class="pl-0 sm:w-3/5 lg:pl-4 sm:pl-2">
       <p v-if="product.name" class="mb-6 font-bold lg:mb-10">{{ product.name }}</p>
@@ -59,7 +55,10 @@ export default {
 
   async asyncData({ params }) {
     const res = await services.getProductDetail(params.slug);
-    const product = res?.data?.result;
+    const product = {
+      ...res?.data?.result,
+      imageDetails: [res?.data?.result.image, ...res?.data?.result.imageDetails]
+    };
     console.log(product);
     return {
       product,
