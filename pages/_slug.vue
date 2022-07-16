@@ -9,7 +9,9 @@
     </div>
     <div class="pl-0 sm:w-3/5 lg:pl-4 sm:pl-2">
       <p v-if="product.name" class="mb-6 font-bold lg:mb-10">{{ product.name }}</p>
-      <p v-if="product.description" class="mb-5">{{ product.description }}</p>
+      <div v-if="listDescription" class="mb-5">
+        <p v-for="(content, index) in listDescription" :key="index">{{ content }}</p>
+      </div>
       <p
         v-if="product.pricePreDiscount"
         class="mb-5"
@@ -58,6 +60,7 @@ export default {
   async asyncData({ params }) {
     const res = await services.getProductDetail(params.slug);
     const product = res?.data?.result;
+    console.log(product);
     return {
       product,
       error: res.status
@@ -74,6 +77,9 @@ export default {
       return this.product?.productDetails?.filter(
         i => i.productDetailType === "Information"
       );
+    },
+    listDescription() {
+      return this.product?.description?.split("\r\n") || "";
     }
   }
 };
