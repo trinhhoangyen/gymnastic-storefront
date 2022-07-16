@@ -29,7 +29,7 @@
           <img
             v-for="(image, index) in product.imageDetails"
             :key="index"
-            class="w-25 rounded-2xl"
+            class="w-24 rounded-2xl"
             :src="`https://gymnastic-dev.azurewebsites.net/api/storages/${image}`"
             alt="product-image"
           />
