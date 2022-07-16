@@ -16,7 +16,7 @@
       ></v-carousel-item>
     </v-carousel>
 
-    <!-- list -->
+    <!-- list contest -->
     <div class="flex w-4/5 gap-4 py-10 mx-auto bg-white lg:w-3/5">
       <template v-for="item in list" class="w-1/3">
         <div v-if="item.showMore" :key="item">

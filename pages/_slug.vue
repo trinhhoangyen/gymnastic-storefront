@@ -1,7 +1,6 @@
 <template>
   <div>
     <product-detail :product="product" />
-    <list-same-products :category-id="product.productCategory.productCategoryId" />
   </div>
 </template>
 

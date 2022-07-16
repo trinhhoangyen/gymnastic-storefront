@@ -1,6 +1,6 @@
 <template>
   <div class="absolute bottom-0 w-full text-lg text-white bg-red-light">
-    <div class="container w-full p-5 mx-auto lg:px-0 sm:w-3/5 lg:py-10 lg:grid lg:grid-cols-3">
+    <div class="container w-full mx-auto p-7 lg:px-0 sm:w-3/5 lg:py-14 lg:grid lg:grid-cols-3">
       <div v-for="(item, index) in list" :key="index">
         <p class="mb-5 font-semibold">{{ item.headline }}</p>
         <div class="flex mb-5 text-sm" v-for="(content, index) in item.content" :key="index">
