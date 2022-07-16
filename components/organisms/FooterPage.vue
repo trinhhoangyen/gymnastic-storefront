@@ -12,12 +12,9 @@
       <div>
         <p class="mb-5 font-semibold">SOCIAL NETWORK</p>
         <div class="flex">
-          <component
-            :is="icon"
-            class="self-center mr-2 w-7 h-7"
-            v-for="icon in iconList"
-            :key="icon"
-          />
+          <a :href="item.href" target="_blank" :title="item.title" v-for="item in listSocial" :key="item.icon">
+            <component :is="item.icon" class="self-center mr-2 cursor-pointer w-7 h-7" />
+          </a>
         </div>
         <div class="mt-2 fb-page fb_iframe_widget" data-href="https://www.facebook.com/citigymvn/">
           <iframe
@@ -67,8 +64,18 @@ export default {
           ]
         }
       ],
-      list1: [],
-      iconList: ["facebook-icon", "instagram-icon"]
+      listSocial: [
+        {
+          icon: "facebook-icon",
+          title: "Lion TNT",
+          href: "https://www.facebook.com/trungnhantranlions"
+        },
+        {
+          icon: "instagram-icon",
+          title: "Lion TNT",
+          href: "https://www.instagram.com/lions_tnt/"
+        }
+      ]
     };
   },
   methods: {
