@@ -6,7 +6,7 @@
     <div class="pl-0 sm:w-3/5 lg:pl-4 sm:pl-2">
       <p v-if="product.name" class="mb-6 font-bold lg:mb-10">{{ product.name }}</p>
       <div v-if="listDescription" class="mb-5">
-        <p v-for="(content, index) in listDescription" :key="index">{{ content }}</p>
+        <p v-for="(content, index) in listDescription" :key="index" class="text-sm">{{ content }}</p>
       </div>
       <p
         v-if="product.pricePreDiscount"

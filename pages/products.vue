@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap w-4/5 py-10 mx-auto bg-white justify-evenly m-bg-dark">
+  <div class="flex flex-wrap w-9/12 gap-3 py-10 mx-auto bg-white justify-evenly m-bg-dark">
     <product-item
       class="w-full p-3 mb-2 cursor-pointer md:w-2/5 shadow-3xl"
       v-for="(item, index) in products"
