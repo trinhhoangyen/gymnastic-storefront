@@ -1,5 +1,5 @@
 <template>
-  <v-card max-width="300" min-width="250">
+  <v-card max-width="300" min-width="250" @click="goToProductDetail">
     <v-img
       height="200"
       :src="`https://gymnastic-dev.azurewebsites.net/api/storages/${product.image}`"
@@ -36,6 +36,11 @@ export default {
     product: {
       type: Object,
       default: {}
+    }
+  },
+  methods: {
+    goToProductDetail() {
+      this.$router.push(`/${this.product.id}`);
     }
   }
 };
