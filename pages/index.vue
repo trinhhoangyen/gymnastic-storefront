@@ -18,8 +18,8 @@
 
     <!-- list contest -->
     <div class="flex w-4/5 gap-4 py-10 mx-auto bg-white lg:w-3/5">
-      <template v-for="item in list" class="w-1/3">
-        <div v-if="item.showMore" :key="item">
+        <template v-for="item in list" class="w-1/3">
+          <div v-if="item.showMore" :key="item">
           <img :src="item.image" :alt="item.headline" class="object-cover w-full" />
           <div class="py-5 mt-2 text-grey-2">
             <a
@@ -28,10 +28,10 @@
               :href="item.link"
             >{{ item.headline }}</a>
             <p class>{{ item.content }}</p>
+              </div>
           </div>
-        </div>
-      </template>
-    </div>
+        </template>
+      </div>
     <div class="bg-grey-6">
       <div class="w-4/5 pt-5 mx-auto lg:w-3/5 lg:pt-10">
         <div class="flex items-center">
@@ -48,6 +48,9 @@
           </div>
         </div>
       </div>
+    </div>
+    <div>
+      <parallax-home />
     </div>
   </div>
 </template>
@@ -68,9 +71,7 @@ export default {
       list: [
         {
           type: "big",
-          title: "NPC Worldwide Monsterzym Pro Qualifier",
-          headline:
-            "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
+          title: "PERSONAL TRAINER",
           image:
             "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216239/image/10232443-833x474_qmvqty.jpg",
           link:
@@ -81,17 +82,18 @@ export default {
         },
         {
           type: "medium",
-          title: "NPC Worldwide Monsterzym Pro Qualifier",
+          title: "YOGA",
           headline:
             "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
           image:
             "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216247/image/JFM09838-833x474_xatbct.jpg",
           link:
-            "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/"
+            "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/",
+          showMore: true
         },
         {
           type: "small",
-          title: "NPC Worldwide Monsterzym Pro Qualifier",
+          title: "GROUP X",
           headline:
             "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
           image:
@@ -104,35 +106,13 @@ export default {
         },
         {
           type: "small",
-          title: "NPC Worldwide Monsterzym Pro Qualifier",
+          title: "XEM THÊM",
           headline:
             "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
           image:
             "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216247/image/JFM09838-833x474_xatbct.jpg",
           link:
-            "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/"
-        },
-        {
-          type: "small",
-          title: "NPC Worldwide Monsterzym Pro Qualifier",
-          headline:
-            "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
-          image:
-            "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216247/image/JMP_8635-833x474_uttjtx.jpg",
-          link:
-            "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/"
-        },
-        {
-          type: "small",
-          title: "NPC Worldwide Monsterzym Pro Qualifier",
-          headline:
-            "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
-          image:
-            "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216239/image/10232444-833x474_dphtbq.jpg",
-          link:
             "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/",
-          content:
-            "Check out the contest photos from the 2022 NPC Worldwide Korea Regional Qualifier! Click here to see the...",
           showMore: true
         }
       ],
