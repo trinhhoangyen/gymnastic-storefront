@@ -8,10 +8,7 @@
     <p class="px-3 py-2 text-base font-semibold">{{ product.name }}</p>
     <v-divider class="mx-1" />
     <div class="items-center p-3">
-      <p
-        v-if="product.pricePreDiscount && product.discountPercentage"
-        class="flex text-xs font-semibold"
-      >
+      <p v-if="product.discountPercentage" class="flex text-xs font-semibold">
         <span
           class="mr-2 text-gray-700 line-through animate-pulse"
         >{{ product.pricePreDiscount | formatPriceVnd }}</span>
@@ -31,7 +28,7 @@ export default {
   filters: {
     formatPriceVnd
   },
-  
+
   props: {
     product: {
       type: Object,
@@ -41,6 +38,9 @@ export default {
   methods: {
     goToProductDetail() {
       this.$router.push(`/${this.product.id}`);
+    },
+    discountPercentage() {
+      return parseFloat(this.product.discountPercentage) * 100;
     }
   }
 };

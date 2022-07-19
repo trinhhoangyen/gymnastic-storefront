@@ -3,7 +3,7 @@
     <!-- ProductDetail.vue molecules -->
     <product-detail :product="product" />
     <!-- ListSameProducts.vue molecules -->
-    <list-same-products :category-id="categoryId" />
+    <list-same-products :same-products="sameProducts" />
   </div>
 </template>
 
@@ -20,9 +20,12 @@ export default {
       ...res?.data?.result,
       imageDetails: [res?.data?.result.image, ...res?.data?.result.imageDetails]
     };
-
+    const sameProducts = await services.getSameProducts(
+      res?.data?.result.productCategory.productCategoryId
+    );
     return {
-      product
+      product,
+      sameProducts: sameProducts?.data?.result || []
     };
   },
   computed: {

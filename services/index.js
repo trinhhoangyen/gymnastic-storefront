@@ -9,7 +9,7 @@ const getSameProducts = async (productCategoryId) => {
   const res = await axios.get(
     `/api/products?ProductCategoryId=${productCategoryId}`
   );
-  return res.data.result;
+  return res;
 };
 
 const getProductDetail = async (slug) => {
@@ -17,8 +17,14 @@ const getProductDetail = async (slug) => {
   return res;
 };
 
+const getProductCategories = async () => {
+  const res = await axios.get("/api/products/product-categories/");
+  return res;
+};
+
 export default {
   getProducts,
   getSameProducts,
   getProductDetail,
+  getProductCategories,
 };

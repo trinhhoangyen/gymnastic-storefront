@@ -1,5 +1,5 @@
 <template>
-  <div class="w-11/12 py-20 mx-auto lg:w-9/12">
+  <div class="w-11/12 py-20 mx-auto lg:w-9/12" v-if="sameProducts.length">
     <div class="flex items-center">
       <div class="w-full h-0.5 bg-grey-7"></div>
       <p class="text-2xl text-center min-w-md">Các sản phẩm liên quan</p>
@@ -12,23 +12,13 @@
 </template>
 
 <script>
-import services from "~/services";
-
 export default {
   name: "ListSameProducts",
   props: {
-    categoryId: {
-      type: String,
-      default: ""
+    sameProducts: {
+      type: Array,
+      default: []
     }
-  },
-  data() {
-    return {
-      sameProducts: []
-    };
-  },
-  async created() {
-    this.sameProducts = await services.getSameProducts(this.categoryId);
   }
 };
 </script>

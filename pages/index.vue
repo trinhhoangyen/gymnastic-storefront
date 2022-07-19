@@ -1,5 +1,6 @@
 <template>
   <div class="w-full">
+    <!-- v-carousel Vuetify component -->
     <v-carousel
       :continuous="true"
       :cycle="true"
@@ -18,8 +19,8 @@
 
     <!-- list contest -->
     <div class="flex w-4/5 gap-4 py-10 mx-auto bg-white lg:w-3/5">
-        <template v-for="item in list" class="w-1/3">
-          <div v-if="item.showMore" :key="item">
+      <template v-for="item in list" class="w-1/3">
+        <div v-if="item.showMore" :key="item">
           <img :src="item.image" :alt="item.headline" class="object-cover w-full" />
           <div class="py-5 mt-2 text-grey-2">
             <a
@@ -28,10 +29,10 @@
               :href="item.link"
             >{{ item.headline }}</a>
             <p class>{{ item.content }}</p>
-              </div>
           </div>
-        </template>
-      </div>
+        </div>
+      </template>
+    </div>
     <div class="bg-grey-6">
       <div class="w-4/5 pt-5 mx-auto lg:w-3/5 lg:pt-10">
         <div class="flex items-center">
