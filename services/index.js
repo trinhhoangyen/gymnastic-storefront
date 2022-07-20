@@ -19,7 +19,7 @@ const getProductDetail = async (slug) => {
 
 const getProductCategories = async () => {
   const res = await axios.get("/api/products/product-categories/");
-  return res;
+  return res.data.result;
 };
 
 export default {
