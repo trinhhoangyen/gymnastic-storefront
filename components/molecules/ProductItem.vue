@@ -9,7 +9,10 @@
       />
     </div>
     <div class="py-2 pl-0 sm:w-3/5 lg:pl-4 sm:pl-2">
-      <p v-if="data.name" class="mb-2 text-base font-bold text-grey-3">{{ data.name}}</p>
+      <p
+        v-if="data.name"
+        class="mb-2 text-base font-bold line-clamp-3 text-grey-3"
+      >{{ data.name}} abcdefghijklmnopq</p>
       <!-- Price -->
       <div class="items-center mb-5">
         <p

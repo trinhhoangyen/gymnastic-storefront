@@ -17,6 +17,17 @@
       ></v-carousel-item>
     </v-carousel>
 
+    <swiper
+      :slides-per-view="3"
+      :space-between="50"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+    >
+      <swiper-slide>Slide 1</swiper-slide>
+      <swiper-slide>Slide 2</swiper-slide>
+      <swiper-slide>Slide 3</swiper-slide>
+    </swiper>
+
     <!-- list contest -->
     <div class="flex w-4/5 gap-4 py-10 mx-auto bg-white lg:w-3/5">
       <template v-for="item in list" class="w-1/3">
@@ -133,6 +144,12 @@ export default {
   },
 
   methods: {
+    onSwiper(swiper: any) {
+      console.log(swiper);
+    },
+    onSlideChange() {
+      console.log("slide change");
+    },
     customClass(value: string) {
       return value === "big"
         ? "w-2/3 h-96"

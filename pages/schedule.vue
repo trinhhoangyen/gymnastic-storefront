@@ -246,7 +246,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .codyhouse {
   text-align: center;
   margin: 40px 0;
