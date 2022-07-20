@@ -7,6 +7,7 @@ module.exports = {
       DEFAULT: ".25rem",
       lg: ".5rem",
       "2xl": "1rem",
+      "3xl": "1.5rem",
       full: "9999px",
     },
     fontFamily: {},
@@ -19,6 +20,10 @@ module.exports = {
         "686/16": "686px",
       },
       colors: {
+        "organic-150": "#A0AC9E",
+        "amber-150": "#EDECE6",
+        "amber-250": "#E0E0E0",
+        "amber-350": "#DDE2E5",
         "grey-1": "#202020",
         "grey-2": "#919191",
         "grey-3": "#333",
