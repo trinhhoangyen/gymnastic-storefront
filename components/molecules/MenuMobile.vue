@@ -2,7 +2,7 @@
   <div class="fixed top-0 z-20 w-full bg-white lg:hidden">
     <div class="flex items-center justify-between h-16 px-4 py-5 shadow-3xl">
       <nuxt-link to="/">
-        <img :src="require('@/static/logo.png')" alt="home" width="70px" />
+        <img :src="require('@/static/logo.png')" class="mx-auto" alt="home" width="70px" />
       </nuxt-link>
       <div class="mx-auto text-xl font-bold text-black">{{ currRoute.name }}</div>
 
@@ -23,14 +23,9 @@
 
             <div v-for="(item, index) in listNav" :key="index" class="bg-white">
               <!-- NavigationItem.vue molecules -->
-              <navigation-item-mobile
-                v-if="item.path !== '/'"
-                :item-active="itemActive"
-                :item="item"
-                @changeItemActive="changeItemActive"
-                @click.native="changeRoute(item.path)"
-              />
+              <navigation-item-mobile v-if="item.path !== '/'" :item="item" />
             </div>
+            <g-button type="button" @click="callTo" outlined>Liên hệ 028 7300 2858</g-button>
           </div>
         </div>
       </transition>
@@ -39,7 +34,7 @@
 </template>
 
 <script>
-import { EMPTY, ROUTE_NAME } from "~/utils/constants";
+import { ROUTE_NAME } from "~/utils/constants";
 
 export default {
   props: {
@@ -50,18 +45,12 @@ export default {
   },
   data() {
     return {
-      isShowMenuMobile: false,
-      itemActive: ""
+      isShowMenuMobile: false
     };
   },
   computed: {
     currRoute() {
       return ROUTE_NAME.find(e => e.path === this.$route.path) || {};
-    }
-  },
-  watch: {
-    $route() {
-      this.checkRouteActive();
     }
   },
   mounted() {
@@ -80,29 +69,8 @@ export default {
     closeMenu() {
       this.isShowMenuMobile = false;
     },
-    changeItemActive(value) {
-      this.itemActive = this.itemActive === value ? EMPTY : value;
-    },
-    async changeRoute(value) {
-      if (value) {
-        this.isShowMenuMobile = false;
-        await this.$router.push(value);
-      }
-    },
-    checkRouteActive() {
-      this.listNav.forEach(navItem => {
-        if (!navItem.items) {
-          if (navItem?.path === this.$route.fullPath)
-            this.itemActive = navItem.name;
-        } else {
-          navItem.items.forEach(subItem => {
-            if (subItem?.path === this.$route.fullPath) {
-              this.itemActive = navItem.name;
-              this.subItemActive = subItem.name;
-            }
-          });
-        }
-      });
+    callTo() {
+      window.location.href = `tel:02873002858`;
     }
   }
 };
@@ -119,7 +87,7 @@ export default {
   z-index: 9999;
   .menu-main {
     background-color: white;
-    width: 70%;
+    width: 50%;
     height: 100vh;
   }
 }

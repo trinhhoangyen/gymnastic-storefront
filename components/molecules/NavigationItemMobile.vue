@@ -1,8 +1,8 @@
 <template>
-  <div
+  <nuxt-link
     class="flex items-center justify-between w-full p-4 border-l-4"
     :class="isActive ? 'text-main border-main font-bold' : 'border-white'"
-    @click="changeItemActive"
+    :to="item.path"
   >
     <div class="flex">
       <component
@@ -13,7 +13,7 @@
       />
       {{ item.name }}
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -23,23 +23,11 @@ export default {
     item: {
       type: Object,
       default: () => ({})
-    },
-    itemActive: {
-      type: String,
-      default: ""
     }
   },
   computed: {
     isActive() {
-      return this.itemActive === this.item.name;
-    }
-  },
-  methods: {
-    changeItemActive() {
-      this.$emit("changeItemActive", this.item.name);
-    },
-    callTo() {
-      window.location.href = `tel:0969763253`;
+      return this.$route.path === this.item.path;
     }
   }
 };

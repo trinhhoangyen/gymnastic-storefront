@@ -1,6 +1,6 @@
 <template>
   <div class="w-4/5 h-full pt-5 mx-auto mt-24 lg:pt-10 lg:w-3/5 text-grey-2">
-    <parallax/>
+    <parallax />
     <div class="mt-32">
       <svg
         class="w-6 h-6 m-auto text-gray-900 animate-bounce"

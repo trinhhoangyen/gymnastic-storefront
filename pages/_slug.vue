@@ -30,6 +30,7 @@ export default {
   },
   computed: {
     categoryId() {
+      console.log(this.product);
       return this.product.productCategory.productCategoryId;
     }
   }

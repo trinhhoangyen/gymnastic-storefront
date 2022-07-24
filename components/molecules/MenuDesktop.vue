@@ -10,7 +10,7 @@
         </div>
 
         <div class="max-w-xs">
-          <input-text
+          <g-input
             class="flex"
             v-model="searchKey"
             placeholder="Tìm kiếm"
