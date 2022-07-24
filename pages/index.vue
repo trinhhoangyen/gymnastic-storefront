@@ -17,7 +17,7 @@
       ></v-carousel-item>
     </v-carousel>
 
-    <swiper
+    <!-- <swiper
       :slides-per-view="3"
       :space-between="50"
       @swiper="onSwiper"
@@ -26,7 +26,7 @@
       <swiper-slide>Slide 1</swiper-slide>
       <swiper-slide>Slide 2</swiper-slide>
       <swiper-slide>Slide 3</swiper-slide>
-    </swiper>
+    </swiper>-->
 
     <!-- list contest -->
     <div class="flex w-4/5 gap-4 py-10 mx-auto bg-white lg:w-3/5">

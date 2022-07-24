@@ -20,7 +20,29 @@ export const EMPTY_ARRAY = [];
 
 export const EMPTY_OBJECT = {};
 
-export const ROUTE_NAME = [{ path: "/", name: "Trang chủ" }];
+export const ROUTE_NAME = [
+  { name: "Trang chủ", path: "/", icon: "home", isDesktop: false },
+  {
+    name: "Về chúng tôi",
+    path: "/about",
+    icon: "account",
+  },
+  {
+    name: "Sản phẩm",
+    path: "/products",
+    icon: "account",
+  },
+  {
+    name: "Hội viên",
+    path: "/partner",
+    icon: "account",
+  },
+  {
+    name: "Thành tích",
+    path: "/achievement",
+    icon: "account",
+  },
+];
 
 export const ICON = {
   EYE: "eye",

@@ -1,8 +1,9 @@
 <template>
   <nuxt-link
-    class="flex items-center h-full text-sm font-bold uppercase border-t-4 border-transparent cursor-pointer lg:mx-3 hover:text-red-bold text-grey-4"
+    class="flex items-center mx-2 text-sm font-bold uppercase border-t-4 border-transparent cursor-pointer xl:mx-3 hover:text-red-bold text-grey-4"
     :to="item.path"
     :class="customClass"
+    v-if="item.path !== '/'"
   >
     <div v-if="item.name">{{ item.name }}</div>
   </nuxt-link>
