@@ -36,13 +36,14 @@ module.exports = {
           7: "#dedede",
         },
         main: {
-          DEFAULT: "#f5d42d",
+          DEFAULT: "#FFCE45",
+          red: "#A10035",
         },
         "black-50": "rgba(0, 0, 0, 0.5)",
-        "red": {
+        red: {
           light: "#a50000",
-          bold: "#720000"
-        }
+          bold: "#720000",
+        },
       },
       minWidth: {
         xs: "280px",
