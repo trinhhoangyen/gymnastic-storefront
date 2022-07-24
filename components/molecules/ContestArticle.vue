@@ -21,8 +21,8 @@
           </svg>
           APRIL 24, 2022
         </p>
-        <div class="mb-2 text-xl font-bold text-gray-900 hover:text-yellow">
-          <a class="hover:text-yellow" href="/post/1">
+        <div class="mb-2 text-xl font-bold text-gray-900 hover:text-main">
+          <a class="hover:text-main" href="/post/1">
             2022 IFBB Wasatch Warrior Pro Figure Champion Nicole
             Zenobia Graham Posing 4K Video
           </a>

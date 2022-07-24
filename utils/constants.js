@@ -21,7 +21,7 @@ export const EMPTY_ARRAY = [];
 export const EMPTY_OBJECT = {};
 
 export const ROUTE_NAME = [
-  { name: "Trang chủ", path: "/", icon: "home", isDesktop: false },
+  { name: "Trang chủ", path: "/", icon: "home" },
   {
     name: "Về chúng tôi",
     path: "/about",

@@ -27,7 +27,7 @@ export default {
   computed: {
     customClass() {
       return this.$route.path === this.item.path
-        ? "text-yellow-1 border-yellow-1"
+        ? "text-main border-main"
         : "";
     }
   },

@@ -1,8 +1,7 @@
 <template>
   <div>
-    <!-- <menu-mobile :list-nav="listNav" /> -->
+    <menu-mobile :list-nav="listNav" />
     <menu-desktop :list-nav="listNav" />
-    <!-- <div class="hidden h-px lg:block bg-amber-250"></div> -->
   </div>
 </template>
 

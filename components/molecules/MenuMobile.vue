@@ -1,44 +1,40 @@
 <template>
   <div class="fixed top-0 z-20 w-full bg-white lg:hidden">
-    <div class="flex items-center justify-between px-4 py-5 shadow-3xl">
-      <div>
-        <nuxt-link to="/" class="mx-auto">
-          <img :src="require('@/static/logo.png')" alt="home" width="70px" />
-        </nuxt-link>
-      </div>
+    <div class="flex items-center justify-between h-16 px-4 py-5 shadow-3xl">
+      <nuxt-link to="/">
+        <img :src="require('@/static/logo.png')" alt="home" width="70px" />
+      </nuxt-link>
       <div class="mx-auto text-xl font-bold text-black">{{ currRoute.name }}</div>
 
       <div class="cursor-pointer lg:hidden">
         <!-- HamburgerIcon.vue logo -->
         <hamburger-icon @click.native.stop="showMenu" />
       </div>
-    </div>
 
-    <!-- menu -->
-    <transition name="fade" mode="out-in">
-      <div v-if="isShowMenuMobile" class="h-4 overflow-y-scroll menu">
-        <div v-click-outside="closeMenu" class="menu-main">
-          <div class="py-5">
-            <nuxt-link :to="{ path: '/' }">
-              <img :src="require('@/static/logo.png')" alt="home" />
-            </nuxt-link>
-          </div>
+      <!-- menu -->
+      <transition name="fade" mode="out-in">
+        <div v-if="isShowMenuMobile" class="h-4 overflow-y-scroll menu">
+          <div v-click-outside="closeMenu" class="menu-main">
+            <div class="py-5">
+              <nuxt-link :to="{ path: '/' }">
+                <img :src="require('@/static/logo.png')" alt="home" width="70px" />
+              </nuxt-link>
+            </div>
 
-          <div v-for="nav in list" :key="nav.name" class="bg-white">
-            <!-- NavigationItem.vue molecules -->
-            <navigation-item-mobile
-              :item-active="itemActive"
-              :sub-item-active="subItemActive"
-              :data="nav"
-              @changeItemActive="changeItemActive"
-              @changeSubItemActive="changeSubItemActive"
-              @click.native="changeRoute(nav.path)"
-              @changeRoute="changeRoute"
-            />
+            <div v-for="(item, index) in listNav" :key="index" class="bg-white">
+              <!-- NavigationItem.vue molecules -->
+              <navigation-item-mobile
+                v-if="item.path !== '/'"
+                :item-active="itemActive"
+                :item="item"
+                @changeItemActive="changeItemActive"
+                @click.native="changeRoute(item.path)"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </transition>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -55,14 +51,11 @@ export default {
   data() {
     return {
       isShowMenuMobile: false,
-      user: {},
-      itemActive: "",
-      subItemActive: ""
+      itemActive: ""
     };
   },
   computed: {
     currRoute() {
-      if (this.$route.name === "slug")
       return ROUTE_NAME.find(e => e.path === this.$route.path) || {};
     }
   },
@@ -90,33 +83,10 @@ export default {
     changeItemActive(value) {
       this.itemActive = this.itemActive === value ? EMPTY : value;
     },
-    changeSubItemActive(value) {
-      this.subItemActive = value;
-    },
     async changeRoute(value) {
       if (value) {
-        if (value === "logout") {
-          await this.logout();
-        } else {
-          this.isShowMenuMobile = false;
-          await this.$router.push(value);
-        }
-      }
-    },
-    async logout() {
-      try {
-        this.$nuxt.$loading.start();
-        await this.$auth.logout();
-        // Back to login page if logout
-        this.$router.push({ path: "/dang-nhap" });
-      } catch {
-        this.$toast
-          .error("Có lỗi khi thực hiện yêu cầu này, vui lòng thử lại sau!", {
-            position: "top-right"
-          })
-          .goAway(5000);
-      } finally {
-        this.$nuxt.$loading.finish();
+        this.isShowMenuMobile = false;
+        await this.$router.push(value);
       }
     },
     checkRouteActive() {
@@ -137,3 +107,20 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  .menu-main {
+    background-color: white;
+    width: 70%;
+    height: 100vh;
+  }
+}
+</style>

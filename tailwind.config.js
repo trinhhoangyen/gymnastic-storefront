@@ -21,20 +21,28 @@ module.exports = {
       },
       colors: {
         "organic-150": "#A0AC9E",
-        "amber-150": "#EDECE6",
-        "amber-250": "#E0E0E0",
-        "amber-350": "#DDE2E5",
-        "grey-1": "#202020",
-        "grey-2": "#919191",
-        "grey-3": "#333",
-        "grey-4": "#1a1a1a",
-        "grey-5": "#252525",
-        "grey-6": "#f4f4f4",
-        "grey-7": "#dedede",
-        "yellow-1": "#f5d42d",
+        amber: {
+          150: "#EDECE6",
+          250: "#E0E0E0",
+          350: "#DDE2E5",
+        },
+        grey: {
+          1: "#202020",
+          2: "#919191",
+          3: "#333",
+          4: "#1a1a1a",
+          5: "#252525",
+          6: "#f4f4f4",
+          7: "#dedede",
+        },
+        main: {
+          DEFAULT: "#f5d42d",
+        },
         "black-50": "rgba(0, 0, 0, 0.5)",
-        "red-light": "#a50000",
-        "red-bold": "#720000",
+        "red": {
+          light: "#a50000",
+          bold: "#720000"
+        }
       },
       minWidth: {
         xs: "280px",
