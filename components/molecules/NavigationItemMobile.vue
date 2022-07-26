@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "NavigationItem",
+  name: "NavigationItemMobile",
   props: {
     item: {
       type: Object,

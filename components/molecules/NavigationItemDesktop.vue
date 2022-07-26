@@ -1,8 +1,22 @@
 <template>
   <nuxt-link
-    class="flex items-center mx-2 text-sm font-bold uppercase border-t-4 border-transparent cursor-pointer xl:mx-3 hover:text-red-bold text-grey-4"
+    class="
+      flex
+      items-center
+      mx-2
+      text-sm
+      font-bold
+      uppercase
+      border-t-4
+      cursor-pointer
+      xl:mx-3
+    "
+    :class="
+      isActive
+        ? 'text-main border-main'
+        : 'text-grey-4 border-white hover:text-red-bold'
+    "
     :to="item.path"
-    :class="customClass"
     v-if="item.path !== '/'"
   >
     <div v-if="item.name">{{ item.name }}</div>
@@ -11,26 +25,17 @@
 
 <script>
 export default {
+  name: "NavigationItemDesktop",
   props: {
     item: {
       type: Object,
-      default: () => ({})
+      default: () => ({}),
     },
-    itemActive: {
-      type: String,
-      default: ""
-    }
-  },
-  data() {
-    return {};
   },
   computed: {
-    customClass() {
-      return this.$route.path === this.item.path
-        ? "text-main border-main"
-        : "";
-    }
+    isActive() {
+      return this.$route.path === this.item.path;
+    },
   },
-  methods: {}
 };
 </script>
