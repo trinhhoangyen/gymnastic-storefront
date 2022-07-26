@@ -37,7 +37,9 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/axios"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/axios",
+  '@nuxtjs/vuetify'
+],
 
   axios: {},
 

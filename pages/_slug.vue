@@ -18,7 +18,7 @@ export default {
     const res = await services.getProductDetail(params.slug);
     const product = {
       ...res?.data?.result,
-      imageDetails: [res?.data?.result.image, ...res?.data?.result.imageDetails]
+      imageDetails: [res?.data?.result.image, ...res?.data?.result.imageDetails || []]
     };
     const sameProducts = await services.getSameProducts(
       res?.data?.result.productCategory.productCategoryId
