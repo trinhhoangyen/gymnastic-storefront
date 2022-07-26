@@ -2,7 +2,6 @@
   <div class="fixed top-0 z-20 w-full lg:hidden">
     <div class="flex items-center justify-between h-16 px-4 py-5 shadow-3xl">
       <nuxt-link to="/">
-        <img :src="require('@/static/logo.png')" class="mx-auto" alt="home" width="70px" />
       </nuxt-link>
       <div class="mx-auto text-xl font-bold text-black">{{ currRoute.name }}</div>
 
