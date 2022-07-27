@@ -65,3 +65,7 @@
     font-display: swap;
   }
 }
+
+button.v-pagination__item--active {
+  background-color: #a50000 !important;
+}
