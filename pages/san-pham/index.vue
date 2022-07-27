@@ -8,7 +8,7 @@
         <div class="flex flex-wrap gap-3 bg-white justify-evenly">
           <product-item
             class="p-3 mb-2 cursor-pointer md:w-2/5 max-w-lg shadow-3xl"
-            v-for="(item, index) in products"
+            v-for="(item, index) in categorySelected"
             :key="index"
             :data="item"
           />
@@ -28,17 +28,37 @@ import services from "~/services";
 export default {
   data() {
     return {
+      category: "",
       page: 1,
     };
   },
+
   async asyncData() {
     const products = await services.getProducts();
     const productCategories = await services.getProductCategories();
     return { products, productCategories };
   },
+
+  watch: {
+    "$route.query": function (value) {
+      this.category = value?.["the-loai"] || "";
+    },
+  },
+
+  mounted() {
+    this.category = this.$route.query?.["the-loai"] || "";
+  },
+
   computed: {
     countPage() {
       return this.products.length / 5 + (this.products.length % 5) > 0 ? 1 : 0;
+    },
+    categorySelected() {
+      return this?.category
+        ? this.products?.filter((item) =>
+            item?.productCategory?.name?.includes(this.category)
+          )
+        : this?.products;
     },
   },
 };

@@ -5,28 +5,33 @@
       <nuxt-link
         :to="`/san-pham`"
         :class="[
-          'text-base font-semibold',
-          'active' === '' ? 'w-4/5  bg-gray-500 border-l-4 border-l-yellow-500' : ''
+          'text-base text-main p-2',
+          category === ''
+            ? 'w-4/5  bg-gray-500 border-l-4 border-l-yellow-500'
+            : '',
         ]"
-      >Tất cả</nuxt-link>
+        >Tất cả</nuxt-link
+      >
       <nuxt-link
         v-for="(cate, index) in categories"
+        :to="`/san-pham?the-loai=${cate.name}`"
         :key="index"
-        :to="`/san-pham/the-loai=${cate.name}`"
         :class="[
-          'text-base font-semibold',
-          1 === cate.id ? 'w-4/5  bg-gray-500 border-l-4 border-l-yellow-500' : ''
+          'text-base text-main p-2',
+          category === cate.name
+            ? 'w-4/5  bg-gray-500 border-l-4 border-l-main'
+            : '',
         ]"
-      >{{ cate.name }}</nuxt-link>
+        >{{ cate.name }}</nuxt-link
+      >
     </div>
     <div class="w-full lg:hidden">
       <v-select v-model="value" :items="items" multiple>
         <template v-slot:selection="{ item, index }">
           <span v-if="index === 0">{{ item }}</span>
-          <span
-            v-if="index === 1"
-            class="ml-1 text-sm text-grey-2 text-caption"
-          >(+{{ value.length - 1 }} others)</span>
+          <span v-if="index === 1" class="ml-1 text-sm text-grey-2 text-caption"
+            >(+{{ value.length - 1 }} others)</span
+          >
         </template>
       </v-select>
     </div>
@@ -38,12 +43,30 @@ export default {
   props: {
     categories: {
       type: Array,
-      default: []
-    }
+      default: [],
+    },
   },
   data: () => ({
+    category: "",
     items: ["foo", "bar", "fizz", "buzz", "fizzbuzz", "foobar"],
-    value: ["foo", "bar", "fizz"]
-  })
+    value: ["foo", "bar", "fizz"],
+  }),
+
+  watch: {
+    "$route.query": function (value) {
+      this.category = value?.["the-loai"] || "";
+    },
+  },
+
+  mounted() {
+    this.category = this.$route.query?.["the-loai"] || "";
+  },
+
+  computed: {
+    getRoute() {
+      console.log(this.$route.path);
+      return this.$route.path;
+    },
+  },
 };
 </script>
