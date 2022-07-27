@@ -45,7 +45,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-button.v-pagination__item--active {
-  background-color: black;
-}
 </style>

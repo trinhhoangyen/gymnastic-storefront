@@ -14,7 +14,8 @@
       <!-- menu -->
       <transition name="fade" mode="out-in">
         <div v-if="isShowMenuMobile" class="h-4 overflow-y-scroll bg-grey-2 menu">
-          <div class="flex flex-col justify-between menu-main">
+          <div v-click-outside="closeMenu" class="flex flex-col justify-between menu-main">
+            <!-- v-click-outside="closeMenu" -->
             <div>
               <div class="py-5">
                 <nuxt-link :to="{ path: '/' }">
