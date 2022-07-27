@@ -3,7 +3,7 @@
     <div class="flex-col hidden p-2 mt-4 leading-10 lg:flex">
       <div class="font-bold uppercase">Thể loại</div>
       <nuxt-link
-        to="/"
+        :to="`/san-pham`"
         :class="[
           'text-base font-semibold',
           'active' === '' ? 'w-4/5  bg-gray-500 border-l-4 border-l-yellow-500' : ''
@@ -12,7 +12,7 @@
       <nuxt-link
         v-for="(cate, index) in categories"
         :key="index"
-        to="/"
+        :to="`/san-pham/the-loai=${cate.name}`"
         :class="[
           'text-base font-semibold',
           1 === cate.id ? 'w-4/5  bg-gray-500 border-l-4 border-l-yellow-500' : ''

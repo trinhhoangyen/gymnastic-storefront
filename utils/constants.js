@@ -24,22 +24,22 @@ export const ROUTE_NAME = [
   { name: "Trang chủ", path: "/", icon: "home" },
   {
     name: "Sản phẩm",
-    path: "/products",
+    path: "/san-pham",
     icon: "account",
   },
   {
     name: "Bài đăng",
-    path: "/post",
+    path: "/bai-dang",
     icon: "account",
   },
   {
     name: "Về chúng tôi",
-    path: "/about",
+    path: "/ve-chung-toi",
     icon: "account",
   },
   {
     name: "Thành tích",
-    path: "/achievement",
+    path: "/thanh-tich",
     icon: "account",
   },
 ];
