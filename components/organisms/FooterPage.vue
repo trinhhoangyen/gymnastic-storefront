@@ -1,5 +1,9 @@
 <template>
   <div class="absolute bottom-0 w-full text-lg text-white bg-red-light">
+    <!-- back to top -->
+    <div class="fixed z-50 cursor-pointer bottom-5 border-1 border-main-red shadow-3xl rounded-full right-5" @click="scrollToTop">
+      <back-to-top />
+    </div>
     <div class="container w-full mx-auto p-7 lg:px-0 sm:w-3/5 lg:py-14 lg:grid lg:grid-cols-3">
       <div v-for="(item, index) in list" :key="index">
         <p class="mb-5 font-semibold">{{ item.headline }}</p>
@@ -28,9 +32,6 @@
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
           ></iframe>
         </div>
-      </div>
-      <div class="absolute z-10 cursor-pointer top-5 right-5" @click="scrollToTop">
-        <back-to-top />
       </div>
     </div>
     <div
