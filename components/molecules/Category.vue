@@ -7,7 +7,7 @@
         :class="[
           'text-base text-main p-2',
           category === ''
-            ? 'w-4/5  bg-gray-500 border-l-4 border-l-yellow-500'
+            ? 'bg-gray-500 border-l-4 border-l-yellow-500'
             : '',
         ]"
         >Tất cả</nuxt-link
@@ -19,7 +19,7 @@
         :class="[
           'text-base text-main p-2',
           category === cate.name
-            ? 'w-4/5  bg-gray-500 border-l-4 border-l-main'
+            ? 'bg-gray-500 border-l-4 border-l-main'
             : '',
         ]"
         >{{ cate.name }}</nuxt-link
