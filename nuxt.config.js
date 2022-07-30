@@ -1,5 +1,4 @@
 export default {
-  target: "server",
   generate: {
     fallback: true,
   },
