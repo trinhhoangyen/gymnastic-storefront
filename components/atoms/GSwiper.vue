@@ -82,10 +82,9 @@ export default {
 		this.$nextTick(() => {
 			const swiperTop = this.$refs.swiperTop.$swiper;
 			const swiperThumbs = this.$refs.swiperThumbs.$swiper;
-			console.log("swiperTop---- ", swiperTop);
-			console.log("swiperThumbs--- ", swiperThumbs);
-			this.$refs.swiperTop.$swiper = swiperThumbs;
-			this.$refs.swiperThumbs.$swiper = swiperTop;
+			// console.log(swiperTop);
+			// swiperTop.controller.control = swiperThumbs;
+			// swiperThumbs.controller.control = swiperTop;
 		});
 	},
 };
