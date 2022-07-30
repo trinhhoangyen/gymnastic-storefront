@@ -3,6 +3,9 @@ export default {
   generate: {
     fallback: true,
   },
+  server: {
+    port: 4000,
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "MEDIFITNESS - Sản phẩm chất lượng cao",
