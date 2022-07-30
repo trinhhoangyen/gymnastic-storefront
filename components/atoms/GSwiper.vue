@@ -112,7 +112,7 @@ mounted(){
 	&.gallery-top {
 		.swiper-slide {
 			&.swiper-slide-active {
-				background-size: auto;
+				background-size: contain;
 				margin: 0 !important;
 			}
 		}
