@@ -1,14 +1,14 @@
 <template>
   <div class="flex rounded-sm" @click="goToProductDetail">
-    <div class="self-center h-28 sm:w-2/5">
+    <div class="self-center h-28 w-2/5">
       <img
-        class="h-full"
+        class="h-full mx-auto"
         v-if="data.image"
         :src="`https://gymnastic-dev.azurewebsites.net/api/storages/${data.image}`"
         alt="product-image"
       />
     </div>
-    <div class="py-2 pl-0 sm:w-3/5 lg:pl-4 sm:pl-2">
+    <div class="py-2 pl-0 w-3/5 lg:pl-4 sm:pl-2">
       <p
         v-if="data.name"
         class="mb-2 text-base font-bold line-clamp-3 text-grey-3"
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     goToProductDetail() {
-      this.$router.push(`/${this.data.id}`);
+      this.$router.push(`/san-pham/${this.data.id}`);
     }
   }
 };

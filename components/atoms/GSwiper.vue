@@ -87,6 +87,11 @@ export default {
 			// swiperThumbs.controller.control = swiperTop;
 		});
 	},
+	methods: {
+		change(value) {
+			console.log(value);
+		},
+	},
 };
 </script>
 

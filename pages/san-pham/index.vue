@@ -7,7 +7,7 @@
       <div v-if="products">
         <div class="flex flex-wrap gap-3 bg-white justify-evenly">
           <product-item
-            class="p-3 mb-2 cursor-pointer md:w-2/5 max-w-lg shadow-3xl"
+            class="p-3 mb-2 cursor-pointer w-full md:w-2/5 max-w-lg shadow-3xl"
             v-for="(item, index) in categorySelected"
             :key="index"
             :data="item"
