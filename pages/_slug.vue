@@ -4,6 +4,7 @@
     <product-detail :product="product" />
     <!-- ListSameProducts.vue molecules -->
     <list-same-products :same-products="sameProducts" />
+    <comments id="comments" :product-comments="productComments" />
   </div>
 </template>
 
@@ -23,15 +24,25 @@ export default {
     const sameProducts = await services.getSameProducts(
       res?.data?.result.productCategory.productCategoryId
     );
+    const productComments = [];
     return {
       product,
-      sameProducts: sameProducts?.data?.result || []
+      sameProducts: sameProducts?.data?.result || [],
+      productComments: productComments
     };
+  },
+  mounted() {
+    if (this.$route.query?.position) this.scrollTo(this.$route.query?.position);
   },
   computed: {
     categoryId() {
       console.log(this.product);
       return this.product.productCategory.productCategoryId;
+    }
+  },
+  methods: {
+    scrollTo(position) {
+      document.getElementById(position).scrollIntoView({ behavior: "smooth" });
     }
   }
 };
