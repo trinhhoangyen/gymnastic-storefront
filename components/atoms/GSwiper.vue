@@ -102,7 +102,6 @@ export default {
 
 .swiper {
 	.swiper-slide {
-		background-size: cover;
 		background-position: center;
 	}
 	.swiper-button-next,
@@ -112,6 +111,7 @@ export default {
 	&.gallery-top {
 		.swiper-slide {
 			&.swiper-slide-active {
+				background-size: auto;
 				margin: 0 !important;
 			}
 		}
@@ -122,6 +122,9 @@ export default {
 		height: 20%;
 		box-sizing: border-box;
 		padding: 5px;
+		.swiper-slide {
+			background-size: cover;
+		}
 	}
 	&.gallery-thumbs .swiper-slide {
 		width: 25%;

@@ -12,7 +12,7 @@
       <p
         v-if="data.name"
         class="mb-2 text-base font-bold line-clamp-3 text-grey-3"
-      >{{ data.name}} abcdefghijklmnopq</p>
+      >{{ data.name}}</p>
       <!-- Price -->
       <div class="items-center mb-5">
         <p
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     goToProductDetail() {
-      this.$router.push(`/san-pham/${this.data.id}`);
+      this.$router.push(`/${this.data.id}`);
     }
   }
 };
