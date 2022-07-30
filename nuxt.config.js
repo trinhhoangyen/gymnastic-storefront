@@ -1,7 +1,6 @@
 export default {
-  generate: {
-    fallback: true,
-  },
+  target: "server",
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "TNT",
