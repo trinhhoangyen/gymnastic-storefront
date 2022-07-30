@@ -1,9 +1,11 @@
 export default {
   target: "server",
-
+  generate: {
+    fallback: true,
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "TNT",
+    title: "MEDIFITNESS - Sản phẩm chất lượng cao",
     htmlAttrs: {
       lang: "en",
     },
