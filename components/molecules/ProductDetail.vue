@@ -5,7 +5,7 @@
 	>
 		<div class="w-full md:w-1/2 md:mb-0 mb-10">
 			<!-- GSwiper.vue Atoms component -->
-			<g-swiper :list-images="product.imageDetails" />
+			<g-swiper v-if="listImages" :list-images="listImages" />
 		</div>
 		<div class="pl-0 w-full md:w-1/2 lg:pl-4 sm:pl-2">
 			<p v-if="product.name" class="mb-6 font-bold lg:mb-10">
@@ -69,6 +69,11 @@ export default {
 		formatPriceVnd,
 	},
 	computed: {
+		listImages() {
+			return this.product.imageDetails.map(
+				(item) => `https://gymnastic-dev.azurewebsites.net/api/storages/${item}`
+			);
+		},
 		productRange() {
 			return this.product?.productDetails?.filter(
 				(i) => i.productDetailType === "Range"

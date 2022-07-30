@@ -10,7 +10,7 @@
 			<swiper-slide
 				v-for="(item, i) in listImages"
 				:key="i"
-				:style="`background-image:url('https://gymnastic-dev.azurewebsites.net/api/storages/${item}')`"
+				:style="`background-image:url('${item}')`"
 			>
 			</swiper-slide>
 			<div class="swiper-button-next" slot="button-next"></div>
@@ -26,7 +26,7 @@
 			<swiper-slide
 				v-for="(item, i) in listImages"
 				:key="i"
-				:style="`background-image:url('https://gymnastic-dev.azurewebsites.net/api/storages/${item}')`"
+				:style="`background-image:url('${item}')`"
 			>
 			</swiper-slide>
 		</swiper>
@@ -36,14 +36,15 @@
 <script>
 export default {
 	name: "GSwiper",
-
 	props: {
 		listImages: {
 			type: Array,
 			default: [],
 		},
 	},
-
+mounted(){
+	console.log(this.listImages);
+},
 	data() {
 		return {
 			swiperOptionTop: {

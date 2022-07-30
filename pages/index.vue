@@ -1,21 +1,7 @@
 <template>
 	<div class="w-full">
-		<!-- v-carousel Vuetify component -->
-		<v-carousel
-			:continuous="true"
-			:cycle="true"
-			:show-arrows="false"
-			hide-delimiter-background
-			delimiter-icon="mdi-minus"
-		>
-			<v-carousel-item
-				v-for="(item, i) in items"
-				:key="i"
-				:src="item.src"
-				reverse-transition="fade-transition"
-				transition="fade-transition"
-			></v-carousel-item>
-		</v-carousel>
+    <!-- GSwiper.vue Atoms component -->
+		<g-swiper :list-images="items" />
 
 		<!-- list contest -->
 		<div class="flex w-4/5 gap-4 py-10 mx-auto bg-white lg:w-3/5">
@@ -68,12 +54,8 @@ export default {
   data() {
     return {
       items: [
-        {
-          src: "https://citigym.com.vn/storage/uploads/1440x630-at-2x-100-1905x834.jpg",
-        },
-        {
-          src: "https://citigym.com.vn/storage/uploads/1440x630-1905x834.jpg",
-        },
+        "https://citigym.com.vn/storage/uploads/1440x630-at-2x-100-1905x834.jpg",
+        "https://citigym.com.vn/storage/uploads/1440x630-1905x834.jpg",
       ],
       list: [
         {
