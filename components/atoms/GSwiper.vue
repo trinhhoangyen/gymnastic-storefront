@@ -1,5 +1,6 @@
 <template>
 	<div class="thumb-example">
+		<!-- swiper1 -->
 		<swiper
 			v-if="listImages"
 			class="swiper gallery-top"
@@ -15,6 +16,8 @@
 			<div class="swiper-button-next" slot="button-next"></div>
 			<div class="swiper-button-prev" slot="button-prev"></div>
 		</swiper>
+
+		<!-- swiper2 Thumbs -->
 		<swiper
 			class="swiper gallery-thumbs"
 			:options="swiperOptionThumbs"
@@ -31,15 +34,9 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import "swiper/swiper-bundle.css";
-
 export default {
 	name: "GSwiper",
-	components: {
-		Swiper,
-		SwiperSlide,
-	},
+
 	props: {
 		listImages: {
 			type: Array,
@@ -51,31 +48,45 @@ export default {
 		return {
 			swiperOptionTop: {
 				loop: true,
-				loopedSlides: 5, // looped slides should be the same
+				loopedSlides: this.listImages.length,
 				spaceBetween: 10,
+				mousewheel: true,
+				keyboard: {
+					enabled: true,
+				},
 				navigation: {
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev",
 				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
 			},
 			swiperOptionThumbs: {
 				loop: true,
-				loopedSlides: 5, // looped slides should be the same
+				loopedSlides: this.listImages.length,
 				spaceBetween: 10,
 				centeredSlides: true,
 				slidesPerView: "auto",
 				touchRatio: 0.2,
 				slideToClickedSlide: true,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
 			},
 		};
 	},
 	mounted() {
-		// this.$nextTick(() => {
-		// 	const swiperTop = this.$refs.swiperTop.$swiper;
-		// 	const swiperThumbs = this.$refs.swiperThumbs.$swiper;
-		// 	swiperTop.controller.control = swiperThumbs;
-		// 	swiperThumbs.controller.control = swiperTop;
-		// });
+		this.$nextTick(() => {
+			const swiperTop = this.$refs.swiperTop.$swiper;
+			const swiperThumbs = this.$refs.swiperThumbs.$swiper;
+			console.log("swiperTop---- ", swiperTop);
+			console.log("swiperThumbs--- ", swiperThumbs);
+			this.$refs.swiperTop.$swiper = swiperThumbs;
+			this.$refs.swiperThumbs.$swiper = swiperTop;
+		});
 	},
 };
 </script>
@@ -87,6 +98,7 @@ export default {
 
 .swiper {
 	.swiper-slide {
+		background-size: cover;
 		background-position: center;
 	}
 	.swiper-button-next,
@@ -94,6 +106,11 @@ export default {
 		color: #a10035;
 	}
 	&.gallery-top {
+		.swiper-slide {
+			&.swiper-slide-active {
+				margin: 0 !important;
+			}
+		}
 		height: 80%;
 		width: 100%;
 	}
