@@ -77,10 +77,11 @@
 			v-if="productCategories.length"
 			class="flex justify-center p-3 bg-grey-8"
 		>
-			<div
+			<nuxt-link
 				v-for="(item, i) in productCategories"
 				:key="i"
-				class="border-r border-grey-2 w-1/6 px-1"
+				:to="`/san-pham?the-loai=${item.name}`"
+				class="border-r cursor-pointer border-grey-2 w-1/6 px-1"
 			>
 				<img
 					:src="require('@/static/logo.png')"
@@ -91,7 +92,7 @@
 				<p class="text-white uppercase font-bold text-center text-sm">
 					{{ item.name }}
 				</p>
-			</div>
+			</nuxt-link>
 		</div>
 	</div>
 </template>
