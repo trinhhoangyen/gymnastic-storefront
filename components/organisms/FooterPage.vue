@@ -9,28 +9,16 @@
         <p class="mb-5 font-semibold">{{ item.headline }}</p>
         <div class="flex mb-5 text-sm" v-for="(content, index) in item.content" :key="index">
           <component :is="content.icon" class="self-center w-6 h-6 mr-3" />
-          {{content.title}}
+          <!-- {{content.title}} -->
         </div>
       </div>
 
       <div>
         <p class="mb-5 font-semibold">SOCIAL NETWORK</p>
         <div class="flex">
-          <a :href="item.href" target="_blank" :title="item.title" v-for="item in listSocial" :key="item.icon">
+          <!-- <a :href="item.href" target="_blank" :title="item.title" v-for="item in listSocial" :key="item.icon">
             <component :is="item.icon" class="self-center mr-2 cursor-pointer w-7 h-7" />
-          </a>
-        </div>
-        <div class="mt-2 fb-page fb_iframe_widget" data-href="https://www.facebook.com/citigymvn/">
-          <iframe
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftrungnhantranlions&tabs=timeline&width=340&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-            width="340"
-            height="130"
-            style="border:none;overflow:hidden"
-            scrolling="no"
-            frameborder="0"
-            allowfullscreen="true"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-          ></iframe>
+          </a> -->
         </div>
       </div>
     </div>

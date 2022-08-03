@@ -16,7 +16,7 @@
 					:to="`/san-pham?the-loai=${cate.name}`"
 					:key="index"
 					:class="[
-						'text-base text-main p-2',
+						'text-base font-medium text-main p-2',
 						category === cate.name
 							? 'bg-grey-6 border-l-4 border-l-main'
 							: '',

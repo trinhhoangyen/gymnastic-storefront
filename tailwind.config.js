@@ -1,6 +1,9 @@
 module.exports = {
   content: [],
   theme: {
+    dropShadow: {
+      "3xl": "1px 1px 10px #666",
+    },
     borderRadius: {
       none: "0",
       sm: ".125rem",
@@ -34,6 +37,7 @@ module.exports = {
           5: "#252525",
           6: "#f4f4f4",
           7: "#dedede",
+          8: "#666",
         },
         main: {
           DEFAULT: "#f69f00",

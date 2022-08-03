@@ -1,129 +1,129 @@
 <template>
 	<div class="w-full">
-    <!-- GSwiper.vue Atoms component -->
-		<g-swiper :list-images="items" />
-
-		<!-- list contest -->
-		<div class="flex w-4/5 gap-4 py-10 mx-auto bg-white lg:w-3/5">
-			<template v-for="item in list" class="w-1/3">
-				<div v-if="item.showMore" :key="item">
-					<img
-						:src="item.image"
-						:alt="item.headline"
-						class="object-cover w-full"
-					/>
-					<div class="py-5 mt-2 text-grey-2">
-						<a
-							class="w-full text-2xl font-medium text-black"
-							target="_blank"
-							:href="item.link"
-							>{{ item.headline }}</a
-						>
-						<p class>{{ item.content }}</p>
-					</div>
-				</div>
-			</template>
-		</div>
-		<div class="bg-grey-6">
-			<div class="w-4/5 pt-5 mx-auto lg:w-3/5 lg:pt-10">
-				<div class="flex items-center">
-					<div class="w-full h-0.5 bg-grey-7"></div>
-					<p class="text-2xl text-center min-w-md">FEATURED CONTESTS</p>
-					<div class="w-full h-0.5 bg-grey-7"></div>
-				</div>
-				<div
-					class="flex h-full pt-10 pb-20 overflow-x-scroll gap-x-2 text-grey-2"
-				>
-					<div v-for="item in list" :key="item" class="min-w-md">
-						<img :src="item.image" :alt="item.headline" class="w-full" />
-						<div class="p-3 text-xl text-black uppercase">
-							<a target="_blank" :href="item.link">{{ item.title }}</a>
-						</div>
+		<div class="bg__image_about">
+			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
+				<img :src="require('@/static/logo.png')" alt="home" width="150px" />
+				<div class="">
+					<p
+						class="
+							text-center
+							uppercase
+							mb-40
+							mt-20
+							text-5xl
+							drop-shadow-3xl
+							text-white
+							font-medium
+						"
+					>
+						Về chúng tôi
+					</p>
+					<div class="border-t-4 border-main py-5">
+						<h3 class="font-semibold">WELCOME</h3>
+						<h4 class="font-medium">BEHIND THE SCIENCE</h4>
+						<p class="text-base">
+							Meditech is one of the leading companies in the production of
+							high-end performance enhancing drugs to build better physiques. It
+							is our endeavor at Meditech to manufacture the purest most potent
+							steroid formulations and make our products available to athletes
+							across the globe.
+							<br /><br />
+							We use only Active Pharmaceutical Ingredients (APIs) of superior
+							quality (USP/BP) and have set up strict set of processes to ensure
+							all our products meet the highest quality standards in the
+							industry.
+							<br /><br />
+							The bodybuilding market has become flooded with a large number of
+							unscrupulous companies selling low grade steroids. The products
+							these companies promote are not standardized and therefore health
+							risk. At Meditech, we place a premium on offering absolute
+							effective and safe steroids which gives our customers peace of
+							mind and complete satisfaction.
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div>
-			<parallax-home />
+
+		<div class="bg__image_content">
+			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
+				<h3 class="text-white font-semibold">OUR MISSION</h3>
+				<h3 class="text-main font-semibold">AND VISION</h3>
+				<p class="text-grey-8 text-base">
+					Reliability, credibility and excellence are the principles Meditech
+					stands for. Meditech has established its reputation as an excellent
+					manufacturer of performance enhancing drugs. We care for the quality
+					of our products we offer to our clients. For ensuring the quality and
+					effectiveness of our drugs, we have got a dedicated research and
+					development centre where our professionals are always seeking to make
+					our products more effective. We are enthusiastic and passionate about
+					providing quality products and services that improve performance and
+					deliver outstanding results to our customers.
+				</p>
+			</div>
+			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
+				<h3 class="text-white font-semibold">PRODUCT</h3>
+				<h3 class="text-main font-semibold">PORTFOLIO</h3>
+				<p class="text-grey-8 text-base">
+					At Meditech we are offering the most comprehensive variety of
+					anabolic/androgenic steroids to date. Our product diversity reaches
+					from anabolic/ androgenic hormones to anti-estrogens over to peptides
+					and proteins in different formulations such as tablets, capsules, gels
+					and injections.
+				</p>
+			</div>
+		</div>
+		<div
+			v-if="productCategories.length"
+			class="flex justify-center p-3 bg-grey-8"
+		>
+			<div
+				v-for="(item, i) in productCategories"
+				:key="i"
+				class="border-r border-grey-2 w-1/6 px-1"
+			>
+				<img
+					:src="require('@/static/logo.png')"
+					alt="home"
+					class="mx-auto"
+					width="80px"
+				/>
+				<p class="text-white uppercase font-bold text-center text-sm">
+					{{ item.name }}
+				</p>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script lang="ts">
+import services from "~/services";
+
 export default {
-  data() {
-    return {
-      items: [
-        "https://citigym.com.vn/storage/uploads/1440x630-at-2x-100-1905x834.jpg",
-        "https://citigym.com.vn/storage/uploads/1440x630-1905x834.jpg",
-      ],
-      list: [
-        {
-          type: "big",
-          title: "PERSONAL TRAINER",
-          image:
-            "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216239/image/10232443-833x474_qmvqty.jpg",
-          link: "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/",
-          content:
-            "Check out the contest photos from the 2022 NPC Worldwide Korea Regional Qualifier! Click here to see the...",
-          showMore: true,
-        },
-        {
-          type: "medium",
-          title: "YOGA",
-          headline:
-            "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
-          image:
-            "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216247/image/JFM09838-833x474_xatbct.jpg",
-          link: "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/",
-          showMore: true,
-        },
-        {
-          type: "small",
-          title: "GROUP X",
-          headline:
-            "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
-          image:
-            "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216247/image/JMP_8575-833x474_vppkyv.jpg",
-          link: "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/",
-          content:
-            "Check out the contest photos from the 2022 NPC Worldwide Korea Regional Qualifier! Click here to see the...",
-          showMore: true,
-        },
-        {
-          type: "small",
-          title: "XEM THÊM",
-          headline:
-            "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
-          image:
-            "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216247/image/JFM09838-833x474_xatbct.jpg",
-          link: "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/",
-          showMore: true,
-        },
-      ],
-      listContent: [
-        {
-          type: "big",
-          title: "NPC Worldwide Monsterzym Pro Qualifier",
-          headline:
-            "Around the NPC-2022 NPC Maryland States/East Coast Classic Check-In Photos",
-          image:
-            "https://res.cloudinary.com/dhnpysdvn/image/upload/v1656216239/image/10232443-833x474_qmvqty.jpg",
-          link: "https://npcnewsonline.com/around-the-npc-2022-npc-maryland-states-east-coast-classic-check-in-photos/778147/",
-        },
-      ],
-    };
+  async asyncData() {
+    const productCategories = await services.getProductCategories();
+    return { productCategories };
   },
 
-  methods: {
-    customClass(value: string) {
-      return value === "big"
-        ? "w-2/3 h-96"
-        : value === "medium"
-        ? "w-1/3 pl-1 h-96"
-        : "w-1/4 h-72 pl-1";
-    },
-  },
+  computed: {},
 };
 </script>
 
+
+<style lang="scss" scoped>
+.bg__image_about {
+	overflow: hidden;
+	width: auto;
+	background: url("https://www.meditechpharmaceutical.net/public/images/about-bg.jpg")
+		fixed center top no-repeat #aeaeac;
+
+	@media (max-width: 768px) {
+		background-size: 200% !important;
+	}
+}
+.bg__image_content {
+	background: url("https://www.meditechpharmaceutical.net/public/images/bg-sec2-about.jpg")
+		center no-repeat;
+	overflow: hidden;
+}
+</style>
