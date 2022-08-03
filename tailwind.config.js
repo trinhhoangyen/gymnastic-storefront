@@ -36,7 +36,8 @@ module.exports = {
           7: "#dedede",
         },
         main: {
-          DEFAULT: "#FFCE45",
+          DEFAULT: "#f69f00",
+          hover: "#fdb839",
           red: "#A10035",
         },
         "black-50": "rgba(0, 0, 0, 0.5)",
@@ -49,8 +50,7 @@ module.exports = {
         xs: "280px",
         md: "320px",
       },
-      minHeight: {
-      },
+      minHeight: {},
       boxShadow: {
         "3xl": "0px 10px 20px rgba(0, 0, 0, 0.1);",
       },
