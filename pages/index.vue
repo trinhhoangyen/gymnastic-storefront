@@ -19,26 +19,30 @@
 						Về chúng tôi
 					</p>
 					<div class="border-t-4 border-main py-5">
-						<h3 class="font-semibold">WELCOME</h3>
-						<h4 class="font-medium">BEHIND THE SCIENCE</h4>
+						<h3 class="font-semibold uppercase">chào mừng</h3>
+						<h4 class="font-medium uppercase">Lorem Ipsum</h4>
 						<p class="text-base">
-							Meditech is one of the leading companies in the production of
-							high-end performance enhancing drugs to build better physiques. It
-							is our endeavor at Meditech to manufacture the purest most potent
-							steroid formulations and make our products available to athletes
-							across the globe.
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book. It has
+							survived not only five centuries, but also the leap into
+							electronic typesetting, remaining essentially unchanged. It was
+							popularised in the 1960s with the release of Letraset sheets
+							containing Lorem Ipsum passages, and more recently with desktop
+							publishing software like Aldus PageMaker including versions of
+							Lorem Ipsum.
 							<br /><br />
-							We use only Active Pharmaceutical Ingredients (APIs) of superior
-							quality (USP/BP) and have set up strict set of processes to ensure
-							all our products meet the highest quality standards in the
-							industry.
-							<br /><br />
-							The bodybuilding market has become flooded with a large number of
-							unscrupulous companies selling low grade steroids. The products
-							these companies promote are not standardized and therefore health
-							risk. At Meditech, we place a premium on offering absolute
-							effective and safe steroids which gives our customers peace of
-							mind and complete satisfaction.
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book. It has
+							survived not only five centuries, but also the leap into
+							electronic typesetting, remaining essentially unchanged. It was
+							popularised in the 1960s with the release of Letraset sheets
+							containing Lorem Ipsum passages, and more recently with desktop
+							publishing software like Aldus PageMaker including versions of
+							Lorem Ipsum.
 						</p>
 					</div>
 				</div>
@@ -47,29 +51,27 @@
 
 		<div class="bg__image_content">
 			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
-				<h3 class="text-white font-semibold">OUR MISSION</h3>
-				<h3 class="text-main font-semibold">AND VISION</h3>
+				<h3 class="text-white uppercase font-semibold">Lorem Ipsum</h3>
+				<h3 class="text-main uppercase font-semibold">Lorem Ipsum</h3>
 				<p class="text-grey-8 text-base">
-					Reliability, credibility and excellence are the principles Meditech
-					stands for. Meditech has established its reputation as an excellent
-					manufacturer of performance enhancing drugs. We care for the quality
-					of our products we offer to our clients. For ensuring the quality and
-					effectiveness of our drugs, we have got a dedicated research and
-					development centre where our professionals are always seeking to make
-					our products more effective. We are enthusiastic and passionate about
-					providing quality products and services that improve performance and
-					deliver outstanding results to our customers.
+					Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem Ipsum has been the industry's standard dummy text ever
+					since the 1500s, when an unknown printer took a galley of type and
+					scrambled it to make a type specimen book. It has survived not only
+					five centuries, but also the leap into electronic typesetting,
+					remaining essentially unchanged. It was popularised in the 1960s with
+					the release of Letraset sheets containing Lorem Ipsum passages, and
+					more recently with desktop publishing software like Aldus PageMaker
+					including versions of Lorem Ipsum.
 				</p>
 			</div>
 			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
-				<h3 class="text-white font-semibold">PRODUCT</h3>
-				<h3 class="text-main font-semibold">PORTFOLIO</h3>
+				<h3 class="text-white uppercase font-semibold">Lorem Ipsum</h3>
+				<h3 class="text-main uppercase font-semibold">Lorem Ipsum</h3>
 				<p class="text-grey-8 text-base">
-					At Meditech we are offering the most comprehensive variety of
-					anabolic/androgenic steroids to date. Our product diversity reaches
-					from anabolic/ androgenic hormones to anti-estrogens over to peptides
-					and proteins in different formulations such as tablets, capsules, gels
-					and injections.
+					Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem Ipsum has been the industry's standard dummy text ever
+					since the 1500s,...
 				</p>
 			</div>
 		</div>
@@ -114,7 +116,8 @@ export default {
 <style lang="scss" scoped>
 .bg__image_about {
 	overflow: hidden;
-	width: auto;
+	width: 100%;
+	background-size: 100% !important;
 	background: url("https://www.meditechpharmaceutical.net/public/images/about-bg.jpg")
 		fixed center top no-repeat #aeaeac;
 
@@ -123,6 +126,8 @@ export default {
 	}
 }
 .bg__image_content {
+	width: 100%;
+	background-size: 100% !important;
 	background: url("https://www.meditechpharmaceutical.net/public/images/bg-sec2-about.jpg")
 		center no-repeat;
 	overflow: hidden;

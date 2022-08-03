@@ -5,12 +5,12 @@
       <back-to-top />
     </div>
     
-    <div class="container h-full w-full mx-auto px-3 md:px-6 lg:px-0 sm:w-3/5 lg:grid lg:grid-cols-3">
+    <div class="container h-full w-full mx-auto px-3 md:px-6 lg:px-0 sm:w-4/5 lg:w-3/5 lg:grid lg:grid-cols-3">
       <div v-for="(item, index) in list" :key="index">
         <p class="mb-5 font-semibold">{{ item.headline }}</p>
         <div class="flex mb-3 text-sm" v-for="(content, index) in item.content" :key="index">
           <component :is="content.icon" class="self-center w-4 h-4 mr-2" />
-          <!-- {{content.title}} -->
+          {{content.title}}
         </div>
       </div>
 
@@ -39,10 +39,10 @@ export default {
           content: [
             {
               icon: "location-icon",
-              title: "7A/43/55 Thành Thái, Phường 14, Quận 10"
+              title: "Địa chỉ"
             },
-            { icon: "phone-icon", title: "033 404 2920" },
-            { icon: "work-icon", title: "http://trantrungnhan.com/" }
+            { icon: "phone-icon", title: "Số điện thoại" },
+            { icon: "work-icon", title: "Trang web" }
           ]
         },
         {
