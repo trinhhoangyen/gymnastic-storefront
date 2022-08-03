@@ -19,6 +19,7 @@
 
 		<!-- swiper2 Thumbs -->
 		<swiper
+			v-if="listImages"
 			class="swiper gallery-thumbs"
 			:options="swiperOptionThumbs"
 			ref="swiperThumbs"
@@ -59,10 +60,10 @@ mounted(){
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev",
 				},
-				autoplay: {
-					delay: 2500,
-					disableOnInteraction: false,
-				},
+				// autoplay: {
+				// 	delay: 2500,
+				// 	disableOnInteraction: false,
+				// },
 			},
 			swiperOptionThumbs: {
 				loop: true,
@@ -71,11 +72,7 @@ mounted(){
 				centeredSlides: true,
 				slidesPerView: "auto",
 				touchRatio: 0.2,
-				slideToClickedSlide: true,
-				autoplay: {
-					delay: 2500,
-					disableOnInteraction: false,
-				},
+				slideToClickedSlide: true
 			},
 		};
 	},
@@ -107,13 +104,13 @@ mounted(){
 	}
 	.swiper-button-next,
 	.swiper-button-prev {
-		color: #a10035;
+		color: #f69f00;
 	}
 	&.gallery-top {
 		.swiper-slide {
 			&.swiper-slide-active {
 				background-size: contain;
-				margin: 0 !important;
+				width: 470px !important;
 			}
 		}
 		height: 80%;

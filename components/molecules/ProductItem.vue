@@ -27,7 +27,7 @@
 						}}</span>
 						<span>-{{ discountPercentage }}%</span>
 					</p>
-					<p v-if="data.price" class="text-base font-bold text-red-600">
+					<p v-if="data.price" class="text-base font-bold text-main-red">
 						{{ data.price | formatPriceVnd }}
 					</p>
 				</div>

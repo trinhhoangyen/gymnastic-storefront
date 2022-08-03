@@ -5,8 +5,8 @@
 			<nuxt-link
 				:to="`/san-pham`"
 				:class="[
-					'text-base text-main-red p-2',
-					category === '' ? 'bg-grey-6 border-l-4 border-l-main-red' : '',
+					'text-base text-main p-2',
+					category === '' ? 'bg-grey-6 border-l-4 border-l-main' : '',
 				]"
 				>Tất cả</nuxt-link
 			>
@@ -16,9 +16,9 @@
 					:to="`/san-pham?the-loai=${cate.name}`"
 					:key="index"
 					:class="[
-						'text-base text-main-red p-2',
+						'text-base text-main p-2',
 						category === cate.name
-							? 'bg-grey-6 border-l-4 border-l-main-red'
+							? 'bg-grey-6 border-l-4 border-l-main'
 							: '',
 					]"
 					>{{ cate.name }}</nuxt-link

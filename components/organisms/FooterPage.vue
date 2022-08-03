@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute bottom-0 w-full text-lg text-white bg-red-light">
+  <div class="absolute bottom-0 w-full text-lg text-white bg-main-hover">
     <!-- back to top -->
     <div class="fixed z-50 cursor-pointer bottom-5 border-1 border-main-red shadow-3xl rounded-full right-5" @click="scrollToTop">
       <back-to-top />
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div
-      class="clear-both py-2 text-sm text-center bg-red-bold lg:py-4 border-t-1 border-t-grey-5"
+      class="clear-both py-2 text-sm text-center bg-main lg:py-4 border-t-1 border-t-grey-5"
     >© 2022 Allrights reserved LIONS TNT</div>
   </div>
 </template>

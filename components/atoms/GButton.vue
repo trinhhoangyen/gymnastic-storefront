@@ -50,10 +50,10 @@ export default {
 	computed: {
 		customClass() {
 			return "shadow-3xl" + this.outlined
-				? "border hover:bg-main-red border-main-red hover:text-white text-main-red"
+				? "border hover:bg-main border-main hover:text-white text-main"
 				: // : this.typeButton === "white"
-				  // ? "bg-white hover:bg-main-red hover:text-white text-main-red"
-				  "bg-main-red text-white" +
+				  // ? "bg-white hover:bg-main hover:text-white text-main"
+				  "bg-main text-white" +
 						(this.isExpanded ? "w-full" : "") +
 						(this.disabled ? "opacity-70" : "hover:opacity-90");
 		},

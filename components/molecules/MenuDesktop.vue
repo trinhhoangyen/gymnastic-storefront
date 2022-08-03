@@ -5,7 +5,7 @@
         <div>
           <nuxt-link class="flex items-center" to="/">
             <img :src="require('@/static/logo.png')" alt="home" width="70px" />
-            <p class="font-extrabold align-center text-red-bold">MEDIFITNESS</p>
+            <p class="font-extrabold align-center text-main">MEDIFITNESS</p>
           </nuxt-link>
         </div>
 
