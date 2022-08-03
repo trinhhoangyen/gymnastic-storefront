@@ -1,14 +1,15 @@
 <template>
-  <div class="absolute bottom-0 w-full text-lg text-white bg-main-hover">
+  <div class="absolute bottom-0 w-full text-lg text-white h-40 bg-main-hover">
     <!-- back to top -->
     <div class="fixed z-50 cursor-pointer bottom-5 border-1 border-main-red shadow-3xl rounded-full right-5" @click="scrollToTop">
       <back-to-top />
     </div>
-    <div class="container w-full mx-auto p-7 lg:px-0 sm:w-3/5 lg:py-14 lg:grid lg:grid-cols-3">
+    
+    <div class="container h-full w-full mx-auto px-3 md:px-6 lg:px-0 sm:w-3/5 lg:grid lg:grid-cols-3">
       <div v-for="(item, index) in list" :key="index">
         <p class="mb-5 font-semibold">{{ item.headline }}</p>
-        <div class="flex mb-5 text-sm" v-for="(content, index) in item.content" :key="index">
-          <component :is="content.icon" class="self-center w-6 h-6 mr-3" />
+        <div class="flex mb-3 text-sm" v-for="(content, index) in item.content" :key="index">
+          <component :is="content.icon" class="self-center w-4 h-4 mr-2" />
           <!-- {{content.title}} -->
         </div>
       </div>
@@ -23,7 +24,7 @@
       </div>
     </div>
     <div
-      class="clear-both py-2 text-sm text-center bg-main lg:py-4 border-t-1 border-t-grey-5"
+      class="clear-both text-sm flex items-center justify-center bg-main h-12 border-t border-t-grey-7"
     >© 2022 Allrights reserved LIONS TNT</div>
   </div>
 </template>

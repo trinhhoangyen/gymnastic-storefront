@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="relative min-h-screen pt-16 lg:pt-20 pb-64">
+  <div id="app" class="relative min-h-screen pt-16 lg:pt-20 pb-40">
     <!-- NavigationBar - organism -->
     <navigation-bar />
     <Nuxt />
