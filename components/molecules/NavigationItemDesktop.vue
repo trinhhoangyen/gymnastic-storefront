@@ -14,7 +14,7 @@
     :class="
       isActive
         ? 'text-main border-main'
-        : 'text-grey-4 border-white hover:text-red-bold'
+        : 'text-grey-4 border-white hover:text-main'
     "
     :to="item.path"
     v-if="item.path !== '/'"
