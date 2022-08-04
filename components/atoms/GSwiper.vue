@@ -12,6 +12,7 @@
 				:key="i"
 				:style="`background-image:url('${item}')`"
 			>
+				<slot></slot>
 			</swiper-slide>
 			<div class="swiper-button-next" slot="button-next"></div>
 			<div class="swiper-button-prev" slot="button-prev"></div>
@@ -43,9 +44,6 @@ export default {
 			default: [],
 		},
 	},
-mounted(){
-	console.log(this.listImages);
-},
 	data() {
 		return {
 			swiperOptionTop: {
@@ -72,7 +70,7 @@ mounted(){
 				centeredSlides: true,
 				slidesPerView: "auto",
 				touchRatio: 0.2,
-				slideToClickedSlide: true
+				slideToClickedSlide: true,
 			},
 		};
 	},
@@ -80,15 +78,12 @@ mounted(){
 		this.$nextTick(() => {
 			const swiperTop = this.$refs.swiperTop.$swiper;
 			const swiperThumbs = this.$refs.swiperThumbs.$swiper;
-			// console.log(swiperTop);
 			// swiperTop.controller.control = swiperThumbs;
 			// swiperThumbs.controller.control = swiperTop;
 		});
 	},
 	methods: {
-		change(value) {
-			console.log(value);
-		},
+		change(value) {},
 	},
 };
 </script>

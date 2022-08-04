@@ -13,7 +13,6 @@ import services from "~/services";
 export default {
   scrollToTop: true,
   async asyncData({ params }) {
-    console.log(params);
     const res = await services.getProductDetail(params.slug);
     const product = {
       ...res?.data?.result,
@@ -29,7 +28,6 @@ export default {
   },
   computed: {
     categoryId() {
-      console.log(this.product);
       return this.product.productCategory.productCategoryId;
     }
   }

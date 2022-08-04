@@ -1,102 +1,135 @@
 <template>
-  <div class="w-4/5 h-full pt-5 mx-auto mt-24 lg:pt-10 lg:w-3/5 text-grey-2">
-    <parallax />
-    <div class="mt-32">
-      <svg
-        class="w-6 h-6 m-auto text-gray-900 animate-bounce"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-      </svg>
-    </div>
+	<div class="w-full">
+		<div class="bg__image_about">
+			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
+				<img :src="require('@/static/logo.png')" alt="home" width="150px" />
+				<div class="">
+					<p
+						class="
+							text-center
+							uppercase
+							mb-40
+							mt-20
+							text-5xl
+							drop-shadow-3xl
+							text-white
+							font-medium
+						"
+					>
+						Về chúng tôi
+					</p>
+					<div class="border-t-4 border-main py-5">
+						<h3 class="font-semibold uppercase">chào mừng</h3>
+						<h4 class="font-medium uppercase">Lorem Ipsum</h4>
+						<p class="text-base">
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book. It has
+							survived not only five centuries, but also the leap into
+							electronic typesetting, remaining essentially unchanged. It was
+							popularised in the 1960s with the release of Letraset sheets
+							containing Lorem Ipsum passages, and more recently with desktop
+							publishing software like Aldus PageMaker including versions of
+							Lorem Ipsum.
+							<br /><br />
+							Lorem Ipsum is simply dummy text of the printing and typesetting
+							industry. Lorem Ipsum has been the industry's standard dummy text
+							ever since the 1500s, when an unknown printer took a galley of
+							type and scrambled it to make a type specimen book. It has
+							survived not only five centuries, but also the leap into
+							electronic typesetting, remaining essentially unchanged. It was
+							popularised in the 1960s with the release of Letraset sheets
+							containing Lorem Ipsum passages, and more recently with desktop
+							publishing software like Aldus PageMaker including versions of
+							Lorem Ipsum.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div class="mt-40">
-      <div class="grid content-center grid-cols-2 gap-2">
-        <div class="content-center p-8 m-auto border-4 border-r-0 border-solid border-red-light">
-          <div class="content-center pt-10 title text-grey-3">
-            <h2 class="text-red-light">
-              THE
-              <br />INNOVATOR
-            </h2>
-          </div>
-          <div class="pt-8 text-justify content">
-            <p>
-              I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
-              click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you
-              like on your page. I’m a great place for you to tell a story and let your users know a little more about
-              you.
-              ​
-              <br />This is a great space to write a long text about your company and your services. You can use this space to
-              go into a little more detail about your company. Talk about your team and what services you provide. Tell
-              your visitors the story of how you came up with the idea for your business and what makes you different
-              from your competitors. Make your company stand out and show your visitors who you are.
-            </p>
-          </div>
-        </div>
-        <div>
-          <img
-            src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.6435-9/154378409_471909514187463_888407420001458424_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=ihuaftTl-dIAX-h-5Ha&_nc_ht=scontent.fsgn2-1.fna&oh=00_AT-MSn1IATDo14b20uEQultdAd1MvUwWCp1e4Y5Wgoq5oA&oe=62E8DCBD"
-          />
-        </div>
-      </div>
-    </div>
-
-    <!-- <div class="h-0.5 my-5 bg-grey-2 mt-32"></div> -->
-
-    <div
-      class="grid content-center grid-cols-2 gap-2 mt-40 bg-white border-4 border-white border-solid drop-shadow-lg rounded-2xl"
-    >
-      <div class="p-8 mr-32">
-        <h2 class="text-red-light">Subscribe & Get 20% off</h2>
-        <p>
-          Join our newsletter and discover new destinations to inspire the traveler within. Plus, get 20% off at our
-          online shop. Every week you'll receive expert advice, tips, exclusive offers, and much more.
-        </p>
-      </div>
-      <div class="m-auto mr-8">
-        <div>
-          <input
-            class="w-3/5 p-2 border-2 border-solid rounded-full border-red-light"
-            type="text"
-            placeholder="Email address"
-          />
-          <button
-            class="ml-8 bg-red-light hover:bg-red-bold text-white font-bold p-3.5 rounded-full"
-          >Sign Up</button>
-        </div>
-        <div>
-          <p class="text-base">
-            Subscribe to Lonely Planet newsletters and promotions. Read our
-            <a href>Privacy Policy.</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+		<div class="bg__image_content">
+			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
+				<h3 class="text-white uppercase font-semibold">Lorem Ipsum</h3>
+				<h3 class="text-main uppercase font-semibold">Lorem Ipsum</h3>
+				<p class="text-grey-8 text-base">
+					Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem Ipsum has been the industry's standard dummy text ever
+					since the 1500s, when an unknown printer took a galley of type and
+					scrambled it to make a type specimen book. It has survived not only
+					five centuries, but also the leap into electronic typesetting,
+					remaining essentially unchanged. It was popularised in the 1960s with
+					the release of Letraset sheets containing Lorem Ipsum passages, and
+					more recently with desktop publishing software like Aldus PageMaker
+					including versions of Lorem Ipsum.
+				</p>
+			</div>
+			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
+				<h3 class="text-white uppercase font-semibold">Lorem Ipsum</h3>
+				<h3 class="text-main uppercase font-semibold">Lorem Ipsum</h3>
+				<p class="text-grey-8 text-base">
+					Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem Ipsum has been the industry's standard dummy text ever
+					since the 1500s,...
+				</p>
+			</div>
+		</div>
+		<div
+			v-if="productCategories.length"
+			class="flex justify-center p-3 bg-grey-8"
+		>
+			<nuxt-link
+				v-for="(item, i) in productCategories"
+				:key="i"
+				:to="`/san-pham?the-loai=${item.name}`"
+				class="border-r cursor-pointer border-grey-2 w-1/6 px-1"
+			>
+				<img
+					:src="require('@/static/logo.png')"
+					alt="home"
+					class="mx-auto"
+					width="80px"
+				/>
+				<p class="text-white uppercase font-bold text-center text-sm">
+					{{ item.name }}
+				</p>
+			</nuxt-link>
+		</div>
+	</div>
 </template>
 
-<script>
+<script lang="ts">
+import services from "~/services";
+
 export default {
-  name: "AboutPage",
-  data() {
-    return {
-      list: {}
-    };
-  }
+  async asyncData() {
+    const productCategories = await services.getProductCategories();
+    return { productCategories };
+  },
+
+  computed: {},
 };
 </script>
 
-<style>
-.frame-about-us {
-  height: 29em;
-}
 
-.frame-innovator {
-  height: 40em;
+<style lang="scss" scoped>
+.bg__image_about {
+	overflow: hidden;
+	width: 100%;
+	background-size: 100% !important;
+	background: url("https://www.meditechpharmaceutical.net/public/images/about-bg.jpg")
+		fixed center top no-repeat #aeaeac;
+
+	@media (max-width: 768px) {
+		background-size: 200% !important;
+	}
+}
+.bg__image_content {
+	width: 100%;
+	background-size: 100% !important;
+	background: url("https://www.meditechpharmaceutical.net/public/images/bg-sec2-about.jpg")
+		center no-repeat;
+	overflow: hidden;
 }
 </style>
