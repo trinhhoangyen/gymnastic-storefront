@@ -51,13 +51,13 @@
 		<div class="bg-main py-2">
 			<div class="w-full justify-between flex lg:w-4/5 mx-auto">
 				<nuxt-link
-					to="/ve-chung-toi"
+					to="/hang-moi"
 					class="uppercase text-lg font-bold text-white"
 				>
 					hàng mới
 				</nuxt-link>
 				<nuxt-link
-					to="/ve-chung-toi"
+					to="/san-pham"
 					class="uppercase text-lg font-bold text-white"
 				>
 					sản phẩm
