@@ -86,10 +86,11 @@
 </template>
 
 <script>
-import { ROUTE_NAME } from "~/utils/constants";
+import { ROUTE_NAME, EMPTY } from "~/utils/constants";
 export default {
 	data() {
 		return {
+			searchKey: EMPTY,
 			listNav: ROUTE_NAME,
 		};
 	},

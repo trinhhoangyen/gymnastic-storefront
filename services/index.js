@@ -22,7 +22,6 @@ const getProductCategories = async () => {
 
 const getComments = async (productId) => {
   const res = await axios.get(`/api/feedbacks?ProductId=${productId}`);
-  console.log('comment: ', res);
   return res.data.result;
 };
 

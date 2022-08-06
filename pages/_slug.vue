@@ -12,13 +12,13 @@
 			<h4 class="p-3 bg-grey-6 uppercase">đánh giá sản phẩm</h4>
 			<div class="p-3">
 				<div v-if="comments">
-					<div class="flex" v-for="(item, index) in comments" :key="index">
-						<account color="black" />
-						<div class="text-base">
-							<p>{{ item.email }}</p>
-							<p>{{ item.createdDate }}</p>
-							<p>{{ item.content }}</p>
-							<rating :rate="item.rating" typeRate="star" />
+					<div v-for="(item, index) in comments" :key="index">
+						<comment :item="item" />
+						<div v-if="item.commentItems" class="bg-grey-6 p-3 m-3">
+							<div v-for="(i, key) in item.commentItems" :key="key">
+								<comment :item="i" />
+								<hr class="mb-4">
+							</div>
 						</div>
 					</div>
 				</div>
