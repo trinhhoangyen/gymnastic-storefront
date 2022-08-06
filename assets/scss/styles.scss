@@ -1,3 +1,41 @@
-.bg-homepage {
-  background-image: url('https://www.meditechpharmaceutical.net/public/images/bg-sec2-about.jpg');
+.bg__image_about-header {
+	overflow: hidden;
+	width: 100%;
+	background-size: 100% !important;
+	background: url("https://www.meditechpharmaceutical.net/public/images/about-bg.jpg")
+		fixed center top no-repeat #aeaeac;
+
+	@media (max-width: 768px) {
+		background-size: 200% !important;
+	}
+}
+
+.bg__image_about-content {
+	width: 100%;
+	background-size: 100% !important;
+	background: url("https://www.meditechpharmaceutical.net/public/images/bg-sec2-about.jpg")
+		center no-repeat;
+	overflow: hidden;
+}
+
+
+.bg__image_product-category {
+	overflow: hidden;
+	width: 100%;
+	background-size: 100% !important;
+	background: url("https://www.meditechpharmaceutical.net/public/images/bg-sec2-product.jpg")
+		fixed center top no-repeat #aeaeac;
+
+  @media (max-width: 768px) {
+		background-size: 200% !important;
+	}
+}
+
+.bg__image_label {
+	height: 60px;
+	width: 40px;
+	background-size: 100% !important;
+	background: url('~/static/images/label.png')
+		center no-repeat;
+	overflow: hidden;
 }
