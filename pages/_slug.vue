@@ -3,28 +3,12 @@
 		<!-- ProductDetail.vue molecules -->
 		<product-detail :product="product" />
 
-		<div class="bg-white w-full m-4 p-6 mx-auto lg:w-8/12">
-			<h4 class="p-3 bg-grey-6 uppercase">Mô tả sản phẩm</h4>
-			<p class="text-base p-3">abc</p>
-		</div>
+		<!-- Description.vue organisms -->
+		<description :comments="comments" />
 
-		<div class="bg-white w-full m-4 p-6 mx-auto lg:w-8/12">
-			<h4 class="p-3 bg-grey-6 uppercase">đánh giá sản phẩm</h4>
-			<div class="p-3">
-				<div v-if="comments">
-					<div v-for="(item, index) in comments" :key="index">
-						<comment :item="item" />
-						<div v-if="item.commentItems" class="bg-grey-6 p-3 m-3">
-							<div v-for="(i, key) in item.commentItems" :key="key">
-								<comment :item="i" />
-								<hr class="mb-4">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div v-else></div>
-			</div>
-		</div>
+
+		<!-- Feadback.vue organisms -->
+		<feedback :comments="comments" />
 
 		<!-- ListSameProducts.vue molecules -->
 		<list-same-products :same-products="sameProducts" />
@@ -32,9 +16,11 @@
 </template>
 
 <script>
+import Feedback from "~/components/organisms/Feedback.vue";
 import services from "~/services";
 
 export default {
+	components: { Feedback },
 	scrollToTop: true,
 	async asyncData({ params }) {
 		const res = await services.getProductDetail(params.slug);
