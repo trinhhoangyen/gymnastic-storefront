@@ -7,15 +7,7 @@
 			<p v-if="item.productDetailType === 'Information'" :class="font">
 				{{ item.description }}
 			</p>
-			<div class="flex gap-x-1" v-if="item.productDetailType === 'Range'">
-				<!-- <star v-for="(color, index) in star" :color="color" :key="index" /> -->
-				<div
-					v-for="(color, index) in star"
-					:key="index"
-					class="w-4 h-4 rounded-full"
-					:class="`bg-${color}`"
-				></div>
-			</div>
+			<rating v-else :rate="rate" />
 		</div>
 	</div>
 </template>
@@ -24,7 +16,7 @@
 export default {
 	props: {
 		item: {
-			type: Object,
+			Ratingtype: Object,
 			default: {},
 		},
 		font: {
@@ -33,19 +25,8 @@ export default {
 		},
 	},
 	computed: {
-		star() {
-			const count =
-				this.item?.productDetailType === "Range"
-					? parseInt(this.item.description)
-					: 0;
-			const res = [];
-			for (let index = 1; index <= count; index++) {
-				res.push("main");
-			}
-			for (let index = 1; index <= 5 - count; index++) {
-				res.push("grey-8");
-			}
-			return res;
+		rate() {
+			return parseInt(this.item.description);
 		},
 	},
 };
