@@ -16,11 +16,9 @@
 </template>
 
 <script>
-import Feedback from "~/components/organisms/Feedback.vue";
 import services from "~/services";
 
 export default {
-	components: { Feedback },
 	scrollToTop: true,
 	async asyncData({ params }) {
 		const res = await services.getProductDetail(params.slug);

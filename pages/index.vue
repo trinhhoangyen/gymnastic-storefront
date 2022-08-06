@@ -30,11 +30,17 @@
 
 		<!-- product -->
 		<h3 class="uppercase py-6 text-2xl font-bold">giảm giá đặc biệt</h3>
-		<g-swiper-homepage :products="products"></g-swiper-homepage>
+		<g-swiper-homepage
+			:products="products"
+			:show-discount="false"
+		></g-swiper-homepage>
 
 		<!-- product -->
 		<h3 class="uppercase py-6 text-2xl font-bold">giảm giá đặc biệt</h3>
-		<g-swiper-homepage :products="products"></g-swiper-homepage>
+		<g-swiper-homepage
+			:products="products"
+			:show-discount="false"
+		></g-swiper-homepage>
 
 		<!-- category -->
 		<h3 class="uppercase py-6 text-2xl font-bold">cẩm nang</h3>

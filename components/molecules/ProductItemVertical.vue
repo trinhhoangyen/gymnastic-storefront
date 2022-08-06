@@ -1,6 +1,9 @@
 <template>
 	<div class="w-full relative">
-		<div v-if="showLabel" class="absolute top-0 right-0 z-10 bg__image_label">
+		<div
+			v-if="showDiscount && showLabel"
+			class="absolute top-0 right-0 z-10 bg__image_label"
+		>
 			<p
 				class="text-xs animate-pulse py-1 text-main-red text-center font-medium"
 			>
@@ -59,6 +62,10 @@ export default {
 		data: {
 			type: Object,
 			default: {},
+		},
+		showDiscount: {
+			type: Boolean,
+			default: true,
 		},
 	},
 	filters: {

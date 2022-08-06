@@ -8,7 +8,8 @@
 			ref="swiperTop"
 		>
 			<swiper-slide v-for="(product, i) in products" :key="i">
-				<div class="rounded bg-grey-6 p-2 h-full">
+				<product-item-vertical :data="product" :show-discount="showDiscount" />
+				<!-- <div class="rounded bg-grey-6 p-2 h-full">
 					<div class="flex items-center">
 						<img
 							:src="`https://gymnastic-dev.azurewebsites.net/api/storages/${product.image}`"
@@ -46,7 +47,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</swiper-slide>
 			<div class="swiper-button-next" slot="button-next"></div>
 			<div class="swiper-button-prev" slot="button-prev"></div>
@@ -62,6 +63,10 @@ export default {
 		products: {
 			type: Array,
 			default: [],
+		},
+		showDiscount: {
+			type: Boolean,
+			default: true,
 		},
 	},
 	data() {
