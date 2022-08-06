@@ -23,23 +23,29 @@ export const EMPTY_OBJECT = {};
 export const ROUTE_NAME = [
   { name: "Trang chủ", path: "/", icon: "home" },
   {
+    name: "Hàng mới",
+    path: "/hang-moi",
+    icon: "account",
+  },
+  {
     name: "Sản phẩm",
     path: "/san-pham",
     icon: "account",
   },
+
   {
-    name: "Bài đăng",
-    path: "/bai-dang",
+    name: "Cẩm nang",
+    path: "/cam-nang",
+    icon: "account",
+  },
+  {
+    name: "Thương hiệu",
+    path: "/thuong-hieu",
     icon: "account",
   },
   {
     name: "Về chúng tôi",
     path: "/ve-chung-toi",
-    icon: "account",
-  },
-  {
-    name: "Thành tích",
-    path: "/thanh-tich",
     icon: "account",
   },
 ];
