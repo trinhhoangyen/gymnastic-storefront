@@ -1,5 +1,5 @@
 <template>
-  <div>Achievement</div>
+  <div>Cẩm nang</div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full">
-		<div class="bg__image_about">
+		<div class="bg__image_about-header">
 			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
 				<img :src="require('@/static/logo.png')" alt="home" width="150px" />
 				<div class="">
@@ -49,7 +49,7 @@
 			</div>
 		</div>
 
-		<div class="bg__image_content">
+		<div class="bg__image_about-content">
 			<div class="w-full mx-5 lg:w-4/5 lg:mx-auto my-10">
 				<h3 class="text-white uppercase font-semibold">Lorem Ipsum</h3>
 				<h3 class="text-main uppercase font-semibold">Lorem Ipsum</h3>
@@ -113,23 +113,6 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
-.bg__image_about {
-	overflow: hidden;
-	width: 100%;
-	background-size: 100% !important;
-	background: url("https://www.meditechpharmaceutical.net/public/images/about-bg.jpg")
-		fixed center top no-repeat #aeaeac;
+<style lang="scss">
 
-	@media (max-width: 768px) {
-		background-size: 200% !important;
-	}
-}
-.bg__image_content {
-	width: 100%;
-	background-size: 100% !important;
-	background: url("https://www.meditechpharmaceutical.net/public/images/bg-sec2-about.jpg")
-		center no-repeat;
-	overflow: hidden;
-}
 </style>
