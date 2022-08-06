@@ -6,9 +6,7 @@ const getProducts = async () => {
 };
 
 const getSameProducts = async (productCategoryId) => {
-  const res = await axios.get(
-    `/api/products?ProductCategoryId=${productCategoryId}`
-  );
+  const res = await axios.get(`/api/products?ProductCategoryId=${productCategoryId}`);
   return res;
 };
 
@@ -22,9 +20,16 @@ const getProductCategories = async () => {
   return res.data.result;
 };
 
+const getComments = async (productId) => {
+  const res = await axios.get(`/api/feedbacks?ProductId=${productId}`);
+  console.log('comment: ', res);
+  return res.data.result;
+};
+
 export default {
   getProducts,
   getSameProducts,
   getProductDetail,
   getProductCategories,
+  getComments,
 };
