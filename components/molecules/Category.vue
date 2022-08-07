@@ -3,7 +3,7 @@
 		<div class="flex-col hidden p-2 mt-4 leading-10 lg:flex">
 			<div class="font-bold uppercase">Thể loại</div>
 			<nuxt-link
-				:to="`/san-pham`"
+				:to="`/hang-moi`"
 				:class="[
 					'text-base text-main p-2',
 					category === '' ? 'bg-grey-6 border-l-4 border-l-main' : '',
@@ -13,7 +13,7 @@
 			<div class="flex-col flex" v-if="categories">
 				<nuxt-link
 					v-for="(cate, index) in categories"
-					:to="`/san-pham?the-loai=${cate.name}`"
+					:to="`/hang-moi?the-loai=${cate.name}`"
 					:key="index"
 					:class="[
 						'text-base font-medium text-main p-2',
