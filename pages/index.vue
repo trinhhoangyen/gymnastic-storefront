@@ -46,8 +46,8 @@
 
 		<!-- cam nang -->
 		<h3 class="uppercase py-6 text-2xl font-bold">cẩm nang</h3>
-		<div class="mb-16 flex justify-around">
-			<div v-for="(item, index) in posts" :key="index" class="w-1/4 border border-grey-6">
+		<div class="mb-16 md:flex justify-around">
+			<div v-for="(item, index) in posts" :key="index" class="w-full p-2 md:p-0 md:w-1/4 border border-grey-6">
 				<img :src="item.image" alt="" class="h-44" />
 				<div class="p-2">
 					<p class="font-semibold mb-2 text-grey-5 text-lg">{{ item.title }}</p>
