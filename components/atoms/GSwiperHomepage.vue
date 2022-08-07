@@ -8,7 +8,7 @@
 			ref="swiperTop"
 		>
 			<swiper-slide v-for="(product, i) in products" :key="i">
-				<product-item-vertical :data="product" :show-discount="showDiscount" />
+				<product-item-vertical :data="product" :show-discount="showDiscount" background="bg-grey-6" />
 				<!-- <div class="rounded bg-grey-6 p-2 h-full">
 					<div class="flex items-center">
 						<img

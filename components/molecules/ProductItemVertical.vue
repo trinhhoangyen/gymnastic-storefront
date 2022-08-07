@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full relative">
+	<div class="w-full relative" :class="background">
 		<div
 			v-if="showDiscount && showLabel"
 			class="absolute top-0 right-0 z-10 bg__image_label"
@@ -25,7 +25,7 @@
 			<div class="p-2">
 				<p
 					v-if="data.name"
-					class="mb-2 text-base font-bold line-clamp-3 text-grey-3"
+					class="mb-2 text-base font-bold line-clamp-2 text-grey-3"
 				>
 					{{ data.name }}
 				</p>
@@ -66,6 +66,10 @@ export default {
 		showDiscount: {
 			type: Boolean,
 			default: true,
+		},
+		background: {
+			type: String,
+			default: "",
 		},
 	},
 	filters: {

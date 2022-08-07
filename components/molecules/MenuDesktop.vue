@@ -23,7 +23,8 @@
 
 		<div class="bg-white">
 			<div class="py-2.5 items-center w-full lg:w-4/5 flex mx-auto">
-				<div
+				<nuxt-link
+					to="/"
 					class="
 						bg-grey-2
 						text-white
@@ -36,7 +37,7 @@
 					"
 				>
 					logo
-				</div>
+				</nuxt-link>
 				<div class="max-w-md ml-2">
 					<g-input
 						class="flex w-full"
@@ -50,7 +51,9 @@
 			</div>
 		</div>
 		<div class="w-full bg-main">
-			<div class="justify-between flex w-full py-4 px-2 lg:px-0 lg:w-4/5 mx-auto">
+			<div
+				class="justify-between flex w-full py-4 px-2 lg:px-0 lg:w-4/5 mx-auto"
+			>
 				<navigation-item-desktop
 					v-for="(item, index) in listNav"
 					:key="index"
