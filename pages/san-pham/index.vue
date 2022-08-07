@@ -1,13 +1,14 @@
 <template>
 	<div class="w-full">
-		<div class="bg__image_product-category p-3 lg:p-6 xl:p-8">
+		<div class="bg__image_product-category py-3 lg:py-5 xl:py-7">
 			<div class="w-4/5 mx-auto">
-				<p class="text-xl mb-2 lg:text-2xl uppercase font-bold text-main-red">
+				<p class="text-xl mb-1.5 lg:text-2xl uppercase font-bold text-main-red">
 					{{ category || "Danh sách" }}
 				</p>
 				<p class="uppercase text-xl lg:text-2xl font-semibold text-main">
 					Sản phẩm
 				</p>
+				<p class="text-sm line-clamp-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 			</div>
 		</div>
 		<!-- category -->
