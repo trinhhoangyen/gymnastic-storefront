@@ -16,7 +16,7 @@
 				<img :src="require('@/static/logo.png')" alt="home" width="70px" />
 			</nuxt-link>
 			<div class="mx-auto text-xl font-bold text-black">
-				{{ currRoute.name }}
+				{{ currRoute }}
 			</div>
 
 			<div class="cursor-pointer lg:hidden">
@@ -51,12 +51,23 @@
 								<!-- NavigationItem.vue molecules -->
 								<navigation-item-mobile v-if="item.path !== '/'" :item="item" />
 							</div>
+
+							<div class="p-2">
+								<g-button isExpanded type="secondary">
+									Đi tới giỏ hàng
+									<arrow-right-icon
+										slot="icon-right"
+										color="white"
+										class="ml-2"
+									/>
+								</g-button>
+							</div>
 						</div>
 						<div class="p-2">
-							<div>
-								<g-button type="button">Địa chỉ</g-button>
-							</div>
-							<g-button type="button" @click="callTo" outlined>
+							<g-button isExpanded type="primary" class="mb-2"
+								>Địa chỉ</g-button
+							>
+							<g-button isExpanded type="outlined" @click="callTo">
 								Số điện thoại
 							</g-button>
 						</div>
@@ -84,7 +95,9 @@ export default {
 	},
 	computed: {
 		currRoute() {
-			return ROUTE_NAME.find((e) => e.path === this.$route.path) || {};
+			console.log(this.$route.name);
+			if (this.$route.name === "slug") return "Chi tiết sản phảm";
+			return ROUTE_NAME.find((e) => e.path === this.$route.path).name;
 		},
 	},
 	mounted() {

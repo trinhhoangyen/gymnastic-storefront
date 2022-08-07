@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="md:flex w-10/12 gap-3 py-10 md:py-20 mx-auto lg:gap-6 lg:w-8/12"
+		class="md:flex w-10/12 gap-3 py-0 md:py-10 mx-auto lg:gap-6 lg:w-8/12"
 		v-if="product"
 	>
 		<div class="w-full md:w-1/2 md:mb-0 mb-10">
@@ -23,6 +23,8 @@
 			<p v-if="product.pricePreDiscount" class="mb-5">
 				{{ product.pricePreDiscount | formatPriceVnd }}
 			</p>
+
+			<g-button class="mb-10">Thêm vào giỏ hàng</g-button>
 
 			<div class="justify-between mb-5 lg:flex">
 				<div v-if="productRange" class="lg:w-49/100">

@@ -1,22 +1,14 @@
 <template>
 	<button
 		:disabled="disabled"
-		:class="[customClass, rounded]"
+		class="px-3 py-2 font-semibold flex items-center justify-center"
+		:class="[customClass, rounded, isExpanded ? 'w-full' : '']"
 		@click="onClick"
 		@mouseover="$emit('mouseover')"
 		@mouseleave="$emit('mouseleave')"
 	>
-		<div class="relative flex items-center w-full">
-			<span>
-				<slot name="icon" />
-			</span>
-			<span>
-				<slot />
-			</span>
-			<span class="absolute bottom-0 right-0 my-auto top-1">
-				<slot name="icon-right" />
-			</span>
-		</div>
+		<slot></slot>
+		<slot name="icon-right"></slot>
 	</button>
 </template>
 
@@ -36,26 +28,27 @@ export default {
 		},
 		rounded: {
 			type: String,
-			default: "rounded-nm",
+			default: "rounded",
 		},
 		isExpanded: {
 			type: Boolean,
-			default: true,
+			default: false,
 		},
-	},
-	data() {
-		return {};
+		type: {
+			type: String,
+			default: "primary",
+		},
 	},
 
 	computed: {
 		customClass() {
-			return "shadow-3xl" + this.outlined
-				? "border hover:bg-main border-main hover:text-white text-main"
-				: // : this.typeButton === "white"
-				  // ? "bg-white hover:bg-main hover:text-white text-main"
-				  "bg-main text-white" +
-						(this.isExpanded ? "w-full" : "") +
-						(this.disabled ? "opacity-70" : "hover:opacity-90");
+			return this.type === "primary"
+				? "text-white bg-main hover:bg-main-hover"
+				: this.type === "secondary"
+				? "text-white bg-main-red"
+				: this.type === "outlined"
+				? "border border-solid border-main bg-white text-main hover:text-white hover:bg-main"
+				: "";
 		},
 	},
 

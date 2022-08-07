@@ -22,31 +22,38 @@
 		</div>
 
 		<div class="bg-white">
-			<div class="py-2.5 items-center w-full lg:w-4/5 flex mx-auto">
-				<nuxt-link
-					to="/"
-					class="
-						bg-grey-2
-						text-white
-						uppercase
-						text-center
-						py-2
-						font-bold
-						mr-36
-						px-10
-					"
-				>
-					logo
-				</nuxt-link>
-				<div class="max-w-md ml-2">
-					<g-input
-						class="flex w-full"
-						v-model="searchKey"
-						rounded="rounded"
-						placeholder="Tìm kiếm"
-						type="text"
-						icon="search"
-					/>
+			<div
+				class="py-2.5 w-full mx-auto flex lg:w-4/5 items-center justify-between"
+			>
+				<div class="flex">
+					<nuxt-link
+						to="/"
+						class="
+							bg-grey-2
+							text-white
+							uppercase
+							text-center
+							py-2
+							font-bold
+							mr-36
+							px-10
+						"
+					>
+						logo
+					</nuxt-link>
+					<div class="max-w-md ml-2">
+						<g-input
+							class="flex w-full"
+							v-model="searchKey"
+							rounded="rounded"
+							placeholder="Tìm kiếm"
+							type="text"
+							icon="search"
+						/>
+					</div>
+				</div>
+				<div class="w-5 h-5">
+					<cart />
 				</div>
 			</div>
 		</div>

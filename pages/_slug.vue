@@ -4,8 +4,7 @@
 		<product-detail :product="product" />
 
 		<!-- Description.vue organisms -->
-		<description :comments="comments" />
-
+		<description :content="product.content" />
 
 		<!-- Feadback.vue organisms -->
 		<feedback :comments="comments" />
@@ -43,6 +42,7 @@ export default {
 	},
 	computed: {
 		categoryId() {
+			console.log(this.product);
 			return this.product.productCategory.productCategoryId;
 		},
 	},
