@@ -1,25 +1,16 @@
 <template>
-  <div class="absolute bottom-0 w-full text-lg text-white h-40 bg-main-hover">
+  <div class="absolute bottom-0 w-full text-lg text-white lg:h-40 bg-main-hover">
     <!-- back to top -->
     <div class="fixed z-50 cursor-pointer bottom-5 border-1 border-main-red shadow-3xl rounded-full right-5" @click="scrollToTop">
       <back-to-top />
     </div>
     
-    <div class="container h-full w-full mx-auto px-3 md:px-6 lg:px-0 sm:w-4/5 lg:w-3/5 lg:grid lg:grid-cols-3">
+    <div class="container h-full w-full px-5 md:px-8 lg:px-0 sm:w-4/5 lg:w-3/5 lg:flex lg:justify-around">
       <div v-for="(item, index) in list" :key="index">
         <p class="mb-5 font-semibold">{{ item.headline }}</p>
         <div class="flex mb-3 text-sm" v-for="(content, index) in item.content" :key="index">
           <component :is="content.icon" class="self-center w-4 h-4 mr-2" />
           {{content.title}}
-        </div>
-      </div>
-
-      <div>
-        <p class="mb-5 font-semibold">SOCIAL NETWORK</p>
-        <div class="flex">
-          <!-- <a :href="item.href" target="_blank" :title="item.title" v-for="item in listSocial" :key="item.icon">
-            <component :is="item.icon" class="self-center mr-2 cursor-pointer w-7 h-7" />
-          </a> -->
         </div>
       </div>
     </div>
@@ -54,18 +45,6 @@ export default {
           ]
         }
       ],
-      listSocial: [
-        {
-          icon: "facebook-icon",
-          title: "Lion TNT",
-          href: "https://www.facebook.com/trungnhantranlions"
-        },
-        {
-          icon: "instagram-icon",
-          title: "Lion TNT",
-          href: "https://www.instagram.com/lions_tnt/"
-        }
-      ]
     };
   },
   methods: {

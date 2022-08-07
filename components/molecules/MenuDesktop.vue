@@ -2,41 +2,60 @@
 	<div
 		class="fixed top-0 left-0 z-50 hidden w-full bg-white lg:block shadow-3xl"
 	>
-		<div class="w-full h-20 px-2 mx-auto xl:w-10/12 xl:px-0">
-			<div class="flex justify-between w-full h-full">
-				<div class="flex items-center">
-					<div>
-						<nuxt-link class="flex items-center" to="/">
-							<img
-								:src="require('@/static/logo.png')"
-								alt="home"
-								width="70px"
-							/>
-							<p class="font-extrabold align-center text-main">MEDIFITNESS</p>
-						</nuxt-link>
-					</div>
+		<div class="bg-main-red">
+			<div
+				class="
+					lg:w-4/5
+					text-white
+					py-2
+					w-full
+					justify-between
+					font-medium
+					uppercase
+					flex
+					mx-auto
+				"
+			>
+				<p class="text-base">SDT</p>
+				<p class="text-base">địa chỉ</p>
+			</div>
+		</div>
 
-					<div class="max-w-xs ml-2">
-						<g-input
-							class="flex"
-							v-model="searchKey"
-							placeholder="Tìm kiếm"
-							type="text"
-							icon="search"
-							is-icon-left
-						/>
-					</div>
+		<div class="bg-white">
+			<div class="py-2.5 items-center w-full lg:w-4/5 flex mx-auto">
+				<div
+					class="
+						bg-grey-2
+						text-white
+						uppercase
+						text-center
+						py-2
+						font-bold
+						mr-36
+						px-10
+					"
+				>
+					logo
 				</div>
-
-				<div class="h-full">
-					<div class="flex h-full">
-						<navigation-item-desktop
-							v-for="(item, index) in listNav"
-							:key="index"
-							:item="item"
-						/>
-					</div>
+				<div class="max-w-md ml-2">
+					<g-input
+						class="flex w-full"
+						v-model="searchKey"
+						rounded="rounded"
+						placeholder="Tìm kiếm"
+						type="text"
+						icon="search"
+					/>
 				</div>
+			</div>
+		</div>
+		<div class="w-full bg-main">
+			<div class="justify-between flex w-full py-4 px-2 lg:px-0 lg:w-4/5 mx-auto">
+				<navigation-item-desktop
+					v-for="(item, index) in listNav"
+					:key="index"
+					:item="item"
+				/>
 			</div>
 		</div>
 	</div>

@@ -22,12 +22,15 @@
 .bg__image_product-category {
 	overflow: hidden;
 	width: 100%;
-	background-size: 100% !important;
 	background: url("https://www.meditechpharmaceutical.net/public/images/bg-sec2-product.jpg")
 		fixed center top no-repeat #aeaeac;
 
   @media (max-width: 768px) {
 		background-size: 200% !important;
+	}
+
+	@media (min-width: 1500px) {
+		background-size: 100% !important;
 	}
 }
 

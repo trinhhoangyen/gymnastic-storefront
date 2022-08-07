@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full">
-		<div class="bg__image_product-category p-2 lg:p-4 xl:p-8">
+		<div class="bg__image_product-category p-3 lg:p-6 xl:p-8">
 			<div class="w-4/5 mx-auto">
 				<p class="text-xl mb-2 lg:text-2xl uppercase font-bold text-main-red">
 					{{ category || "Danh sách" }}

@@ -51,7 +51,6 @@
 import services from "~/services";
 
 export default {
-  layout: "homepage",
   async asyncData() {
     const products = await services.getProducts();
     const productCategories = await services.getProductCategories();
