@@ -75,6 +75,7 @@
 				</p>
 			</div>
 		</div>
+
 		<div
 			v-if="productCategories.length"
 			class="flex justify-center p-3 bg-grey-8"
@@ -107,12 +108,5 @@ export default {
     const productCategories = await services.getProductCategories();
     return { productCategories };
   },
-
-  computed: {},
 };
 </script>
-
-
-<style lang="scss">
-
-</style>

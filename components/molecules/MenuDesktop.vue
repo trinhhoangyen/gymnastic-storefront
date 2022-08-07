@@ -39,7 +39,7 @@
 							px-10
 						"
 					>
-						logo
+						trang chủ
 					</nuxt-link>
 					<div class="max-w-md ml-2">
 						<g-input
