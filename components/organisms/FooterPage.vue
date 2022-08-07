@@ -5,9 +5,9 @@
       <back-to-top />
     </div>
     
-    <div class="container h-full w-full px-5 md:px-8 lg:px-0 sm:w-4/5 lg:w-3/5 lg:flex lg:justify-around">
-      <div v-for="(item, index) in list" :key="index">
-        <p class="mb-5 font-semibold">{{ item.headline }}</p>
+    <div class="container h-full w-full mx-auto px-5 md:px-8 lg:px-0 sm:w-4/5 lg:w-3/5 lg:flex lg:justify-around">
+      <div v-for="(item, index) in list" :key="index" class="self-center">
+        <p class="mb-3 font-semibold">{{ item.headline }}</p>
         <div class="flex mb-3 text-sm" v-for="(content, index) in item.content" :key="index">
           <component :is="content.icon" class="self-center w-4 h-4 mr-2" />
           {{content.title}}
